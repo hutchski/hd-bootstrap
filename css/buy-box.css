@@ -1,0 +1,174 @@
+/* BUY BOX 
+-------------------------------------------------------------*/
+
+/* SHARED BUYBOX STYLES
+-------------------------------------------------------------*/
+.buy-box p {
+	margin-bottom: 10px;
+}
+.buy-box .button-wrapper h4 {
+	margin-bottom: 5px;
+	vertical-align: middle;
+	display: inline-block;
+	margin-top: 5px;
+}
+.buy-box a.btn i {
+	color:#fff;
+	line-height: 0;
+}
+.buy-box a.btn {
+	text-align: center;
+	line-height: 12px;
+}
+.buy-box .cart-quantity {
+	margin-top: 5px;
+}
+.buy-box .show-radio p {
+	margin-left: 34px;
+}
+.
+.buy-box h4.one-line {
+	padding-top: 10px;
+}
+.buy-box span.bb-inline {
+	display: inline;
+}
+/* Radio Buttons */
+.buy-box h4,
+.buy-box p.small {
+	padding-right:0;
+	padding-left:0;
+}
+.buy-box p.small {
+	line-height: 14px;
+}
+.buy-box .radio {
+	display: block;
+	overflow: auto;
+}
+.buy-box .radio label {
+	display: block;
+	cursor: pointer;
+	position: relative;
+}
+.buy-box input[type="radio"] {
+	display:none;
+}
+.buy-box input[type="radio"] {
+	display:none;
+}
+.buy-box input[type="radio"] + label span.radio-btn {
+	display:block;
+	width:30px;
+	height:26px;
+	margin: 0;
+	vertical-align:baseline;
+	cursor:pointer;
+	float: left;
+	margin-right: 5px;
+}
+.buy-box input[type="radio"]:checked + label span.radio-btn:after {
+background:#f96302;
+}
+.buy-box .radio-btn {
+	display: inline-block;
+	position: relative;
+}
+.buy-box .radio-btn:before, 
+.buy-box .radio-btn:after {
+	content: "";
+	position: absolute;
+	border-radius: 50%;
+}
+.buy-box .radio-btn:before {
+	width: 28px;
+	height: 28px;
+	left: 0;
+	top: 0;
+	background-color: #fff;
+	border: 1px solid #999;
+}
+.buy-box .radio-btn:after {
+	width: 16px;
+	height: 16px;
+	left: 7px;
+	top: 7px;
+	background-color: #999;
+}
+.buy-box .show-radio {
+	margin-bottom:10px;
+}
+
+/* BUY BOX ERROR MESSAGING */
+.buy-box .errorMessage	{
+	border:1px solid #333;
+	border-radius: 3px;
+	background-color: #fff;
+	color:#333;
+	margin-bottom: 15px;
+	padding: 5px;
+	overflow: auto;
+}
+.buy-box .errorMessage h4	{
+	display: block;
+	line-height: 12px;
+	font-size: 12px;
+}
+.buy-box .errorMessage p,
+.buy-box .errorMessage h4 {
+	margin-left: 25px;
+	margin-bottom: 0;
+}
+.buy-box .errorMessage p {
+	margin-bottom: 0;
+}
+.buy-box .errorMessage i.icon-close, 
+.buy-box .errorMessage i.icon-attention	{
+	display: block;
+	float: left;
+	position: static;
+	top: 0;
+}
+.buy-box .errorMessage i.icon-attention	{
+	color:#333;
+}
+
+/* TABLET SPECIFIC STYLES - use .tw to target tablet
+-------------------------------------------------------------*/
+.tw .buy-box .show-radio span,
+.tw .buy-box .no-radio span {
+	display: block;
+}
+.tw .buy-box .radio p.bb-inline > span {
+	display: inline;
+}
+
+/* MOBILE SPECIFIC STYLES - use .mw class to target mobile
+-------------------------------------------------------------*/
+.mw .buy-box .radio span {
+	display: inline;
+}
+.mw .buy-box .radio .backordered span {
+	display: block;
+}
+.mw .buy-box .radio p.bb-inline > span {
+	display: inline;
+}
+.mw .buy-box .button-wrapper {
+	display: inline-block;
+}
+.mw .buy-box .button-wrapper p {
+	margin-left: 0;
+	margin-bottom: 0;
+}
+.mw .errorMessage .icon-attention { /* Use sprites for MW instead of font. */
+	display:block;
+	width:14px;
+	height:14px;
+	vertical-align:top;
+	float: left;
+	background-position: -36px -736px;
+}
+.mw .errorMessage .icon-attention.errorText {
+	background-position: -70px -736px;
+}

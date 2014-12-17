@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>BASIC HEADER/FOOTER SHELL</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+	<!-- LOAD NECESSARY STYLE SHEETS HERE -->
+	<link rel="stylesheet" media="all" type="text/css" href="css/tw-reset.css" />
+	<link rel="stylesheet" media="all" type="text/css" href="css/tw-header-footer.css" />
+	<link rel="stylesheet" media="all" type="text/css" href="css/touch-assets.css" />
+
+	<!-- LOAD NECESSARY SCRIPTS HERE -->
+	<script src="scripts/jquery.min.js"></script>
+	<script src="scripts/utils.js"></script>
+	<script src="scripts/thdtouchcommon.js"></script>
+	<script src="scripts/tablet.js"></script>
+	<script src="scripts/jquery.pubsub.js"></script>
+	<script src="scripts/jquery.hammer.js"></script>
+	<script src="scripts/slideinmenu.js"></script>
+	<script src="scripts/iscroll.js"></script>
+	<script src="scripts/stop-window-elastic.js"></script>
+
+</head>
+<body class="tw"><!-- PLEASE IDENTIFY PAGE BY CLASS HERE -->
+	<div id="tabletWindow">
+		<!-- Start Mast and Header -->
+		<header id="thdTablet-mast">
+			<a class="thdTablet-logo" href="BASE_URL_FROM_REQUEST/"><i class="thdTablet-glyph-thd-logo thdOrange"></i></a>
+			<div class="thdTablet-shop-all">
+				<input type="checkbox" class="thdTablet-shop-all-trigger">
+				<div class="thdTablet-copy">
+					<span>SHOP ALL<i class="thdTablet-icon-down-arrow-white"></i></span>
+				</div>
+			</div>
+			<form method="get" id="thdTablet-searchBoxForm" name="searchBoxForm" action="BASE_URL_FROM_REQUEST/s/{0}/">
+				<label for="search" id="thdTablet-search-label">Search</label>
+				<input class="thdTablet-search-box" id="thdTablet-searchFocus" maxlength="60" type="search" name="keyword" autocomplete="off" onkeydown="thdTablet.submitSearch(event);" placeholder="Search"/>
+				<input type="reset" value=" " name="clearSearch" id="thdTablet-clearSearch" onclick="javascript:thdTablet.resetSearch()" />
+				<button type="submit" id="thdTablet-searchButton" class="thdTablet-btn thdTablet-btn-orange" >Search</button>
+				<div id="thdTablet-typeahead" style="display:none;"></div>
+			</form>
+			<nav id="thdTablet-main-navigation">
+				<ul class="thdTablet-nav-btns" role="navigation">
+					<!-- List items are in reverse display order (float:right) -->
+					<li id="thdTablet-nav-more"><a name="&lpos=t-header-more" href="BASE_URL_FROM_REQUEST/More"><i class="thdTablet-glyph-more"></i><br/>More</a></li>	
+					<li id="thdTablet-nav-cart">
+						<div class="thdTablet-mcart">
+							<a name="&lpos=t-header-cart" href="HREF_WCS_NONSECURE/webapp/wcs/stores/servlet/OrderItemDisplay" ><i class="thdTablet-glyph-cart"></i><br/>Cart
+								<div id="thdTablet-mcartnum">
+									<script type="text/javascript">thdTablet.showCartBlock();</script>
+								</div>
+							</a>
+						</div>
+					</li>			
+					<li id="thdTablet-nav-my-list"><a name="&lpos=t-header-my list" href="javascript:goToTHDMyListFromJS();"><i class="thdTablet-glyph-my-list"></i><br/>My List</a></li>
+					<li id="thdTablet-nav-my-account"><a name="&lpos=t-header-my account" href="javascript:goToTHDMyAccountFromJS();"><i class="thdTablet-glyph-my-account"></i><br/>My Account</a></li>
+					<li id="thdTablet-nav-store-finder"><a name="&lpos=t-header-store finder" href="BASE_URL_FROM_REQUEST/store/search"><i class="thdTablet-glyph-store-finder"></i><br/>Store Finder</a></li>
+					<li id="thdTablet-nav-local-ad"><a name="&lpos=t-header-local ad" href="HREF_WCS_NONSECURE/webapp/wcs/stores/servlet/ExternalDirectView?langId=-1&storeId=10051&catalogId=10053&categoryId=523472&rURL=NewShopLocal"><i class="thdTablet-glyph-local-ad-symbol"></i><br/>Local Ad</a></li>
+					<li id="thdTablet-nav-how-to"><a name="&lpos=t-header-how to" href="http://www6.homedepot.com/how-to/index.html"><i class="thdTablet-glyph-credit-center-symbol"></i><br/>Credit Center</a></li>
+				</ul>
+			</nav>
+			<nav id="thdTablet-flyout-wrapper"></nav>
+		</header><!-- /mast and header -->
+
+	<!-- PAGE CONTENTS GO HERE -->
+
+		<footer id="footer-float">
+			<a href="#"><i class="icon-full-site"></i></a>
+		</footer>
+	</div><!-- /tabletWindow -->
+</body>
+</html>	

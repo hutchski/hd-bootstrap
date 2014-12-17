@@ -1,0 +1,2298 @@
+/* ----------------------------------------------------------------------------
+	Purpose:
+	Global CSS Styles for the m.homedepot.com website
+	$Last Updated: 20-Febuary-2011 7:24:19AM $
+/*	----------------------------------------------------------------------------
+	Table Of Contents
+	1. Resets & Defaults
+		1a. Resets
+		1b. Defaults
+	2. Grid & Layout
+		2a. Grid
+		2b. Layout
+	3. Generics
+		3a. Background Colors
+		3b. List Styles 
+		3c. Margin or Padding 
+	4. Typography
+	5. Error Handling
+	6. Sprites
+	7. Form Elements
+	8. Buttons
+	9. UI Elements
+		9a. Tabs
+		9b. Ratings/Reviews
+		9c. Pagination
+		9d. Modal
+		9e. Inline Player
+		9f. Video
+		9g. Map
+	10. Content
+	11. Modules
+		11a. Header
+		11b. Footer
+		11c. Buy Box
+	12. POD
+		12a. Generics
+		12b. PLP
+		12c. PIP
+		12d. Storefinder
+		12e. Documentum
+		12f. Hero/Banner
+		12g. Recommended
+	13. Overrides
+*/
+
+/* Search for FIX-THIS to find styles that need to be fixed. */
+
+/*	----------------------------------------------------------------------------
+	(1) Defaults & Resets */
+
+/*	----------------------------------------
+	(1a) Defaults & Resets - Resets */
+
+html,
+body {
+	height: 100%
+}
+
+/*	----------------------------------------
+	(1b) Defaults & Resets - Defaults */
+
+}
+.hr-default {
+	border: none;
+	background-color: #ccc;
+	color: #ccc;
+	height: 1px;
+}
+
+/*	----------------------------------------------------------------------------
+	(2) Grid & Layout */
+/*	----------------------------------------
+	(2a) Grid & Layout - Grid */
+
+.grid-1 {
+	width: 100%
+}
+.grid-2 {
+	width: 50%
+}
+
+/*	----------------------------------------
+	(2b) Grid & Layout - Layout */
+
+/* Pod object */
+.pod { /* Give every pod 10px padding and light gray bottom border. */
+	padding:10px;
+	border: 0 solid #333;
+	border-bottom-width:1px;
+}
+.pod-secondary { /* Add this to create a light gray pod with dark gray border. */
+	background-color:#eee;
+	border-bottom-color:#ccc;
+}
+.pod-tertiary { /* Add this to create a dark gray pod w/ white border. */
+	background-color:#666;
+	border-bottom-color:#fff;
+}
+
+
+
+/*	----------------------------------------------------------------------------
+	(3) Generics */
+/* Adding borders */
+/* Since we've defined the color/type of the border at the module level, we only need to give border size to activate the appropriate border. */
+
+
+
+
+/*	----------------------------------------
+	(3b) Generics - List Styles */
+
+/* --------------------------------
+	List Objects */
+
+.nav {
+	display: inline-block;
+}
+.list>li {
+	border: 0 solid #ccc;
+	border-bottom-width: 1px;
+}
+.list-light>li {
+	background-color: #ddd;
+	border-bottom-width: 1px;
+}
+.list-secondary>li {
+	background-color: #ccc;
+	border-bottom-color: #fff;
+}
+.list-primary>li {
+	background-color: #F96302;
+	border-bottom-color: #fff;
+}
+.list-dark>li {
+	background-color: #000;
+	border-bottom-color: #fff;
+}
+
+/* --------------------------------
+	Bulleted Lists  */
+
+.list-bullet li {
+	padding-left: 20px
+}
+.mw .list-bullet li:before {
+	content: "";
+	float: left;
+	width: 16px;
+	height: 16px;
+	margin: 0 5px 0 0;
+	background-position: 0 -614px;
+}
+
+/* --------------------------------
+	Definition Lists */
+dl {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	height: 1%;
+	overflow: hidden;
+}
+dt,
+dd {
+	font-size: 14px;
+	display: table-cell;
+	float: left;
+}
+dt {
+	font-weight: bold;
+	clear: left;
+}
+dd {
+	font-weight: normal;
+	clear: right;
+}
+
+/*	----------------------------------------
+	(3c) Generics - Margin or Padding */
+
+/* --------------------------------
+	Text Layout */
+
+.lead {
+	display: block;
+	margin: 10px 0 10px 0;
+}
+
+h1.title .carrot {
+	background-position: right -304px
+}
+
+
+/*	----------------------------------------------------------------------------
+	(6) Sprites */
+
+/* Sprites */
+.icon,
+.arrow,
+.carrot,
+.plus,
+.minus,
+.in,
+.out,
+.cart,
+.account,
+.location,
+.video,
+.phone,
+.head,
+.android,
+.iPhone,
+.close,
+.tel,
+.sms,
+.radio,
+.carrots,
+.carrot,
+.bulettedList li:before,
+#storeinfo a:after,
+.pod-workshop-list .datetime:before,
+.pod-workshop-list .head:before,
+#plusBtn,
+#minusBtn,
+.video-counter,
+.modal-close,
+.pod-value-badge,
+.attn-out-of-stock,
+.attn-important,
+.attn-alert,
+.icon-attention,
+.icon-close,
+.icon-alert {
+	background-image: url('../images/Mobile_Sprite.png');
+	background-size: 94px 848px;
+	background-repeat: no-repeat;
+}
+
+/* Retina @2X sprite */
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5) {
+	.icon,
+	.arrow,
+	.carrot,
+	.plus,
+	.minus,
+	.in,
+	.out,
+	.cart,
+	.account,
+	.location,
+	.video,
+	.phone,
+	.head,
+	.android,
+	.iPhone,
+	.close,
+	.tel,
+	.sms,
+	.radio,
+	.carrots,
+	.carrot,
+	.bulettedList li:before,
+	#storeinfo a:after,
+	.pod-workshop-list .datetime:before,
+	.pod-workshop-list .head:before,
+	#plusBtn,
+	#minusBtn,
+	.video-counter,
+	.modal-close,
+	.pod-value-badge,
+	.attn-out-of-stock,
+	.attn-important,
+	.attn-alert,
+	.icon-attention,
+	.icon-close,
+	.icon-alert {
+		background-image: url('../images/Mobile_Sprite_@2X.png')
+	}
+}
+
+.cart,
+.cart .icon {
+	background-position: -30px -61px
+}
+.account {
+	background-position: -30px -88px
+}
+.location {
+	background-position: -30px -116px
+}
+.btn .location.icon {
+	height: 35px;
+	width: 30px;
+	margin: -10px;
+}
+.video {
+	background-position: -30px -150px
+}
+.phone {
+	background-position: 0px -148px
+}
+.carrot {
+	background-position: right -295px;
+	padding-right: 20px;
+}
+.arrow {
+	background-position: right -480px;
+	padding-right: 30px;
+}
+a.arrow {
+	background-position: right -486px
+}
+.plus,
+.head {
+	background-position: right -414px;
+	padding-right: 10px;
+}
+.head.open {
+	background-position: right -355px
+}
+.orangeGrad .plus {
+	background-position: right -458px
+}
+.remove {
+	background-position: -62px -64px
+}
+.radio {
+	display: inline-block;
+	cursor: pointer;
+	background-position: -60px -135px;
+}
+.radio.checked {
+	background-position: -60px -105px
+}
+.checkbox {
+	background-position: -62px -32px
+}
+.checkbox {
+	background-position: -62px 0px
+}
+.green .check {
+	margin: -4px 10px -4px 0;
+	height: 20px;
+	width: 20px;
+	background-position: -4px -217px;
+	vertical-align: middle;
+}
+.close {
+	background-position: -30px -210px
+}
+.android {
+	background-position: 0 -570px
+}
+.iPhone {
+	background-position: -30px -570px
+}
+.list {
+	background-position: -34px -245px;
+	height: 35px;
+	width: 30px;
+	margin: -4px -10px -20px -3px;
+}
+.in {
+	border: none;
+	height: 40px;
+	width: 40px;
+	background-position: -40px -666px;
+}
+.out {
+	border: none;
+	height: 40px;
+	width: 40px;
+	background-position: 0 -666px;
+}
+.attn-out-of-stock {
+	display:inline-block;
+	width:14px;
+	height:14px;
+	background-position: -53px -736px;
+	vertical-align:top;
+}
+.attn-important {
+	display:inline-block;
+	width:14px;
+	height:14px;
+	background-position: -36px -736px;
+	vertical-align:top;
+}
+.attn-alert {
+	display:inline-block;
+	width:14px;
+	height:14px;
+	background-position: -70px -736px;
+	vertical-align:top;
+}
+.carrots a,
+li.carrot a {
+	background-position: right -294px
+}
+btns a.carrot {
+	background-position: right -300px
+}
+.orange.carrots a,
+.carrots li.orange a,
+.orange li.carrot a,
+.orange.carrot a,
+.orangeSolid_btn.carrot a {
+	background-position: right -324px
+}
+
+
+/*	----------------------------------------------------------------------------
+	(7) Form Elements */
+
+/* --------------------------------
+	Fields */
+
+/*	----------------------------------------------------------------------------
+	(8) Buttons */
+
+.custom-select-wrapper {
+	position:relative;
+	height: 30px;
+}
+
+/* --------------------------------
+	Sort By Drop Down Button */
+
+#sortby-btn {
+	padding: 5px 20px 4px 15px;
+	height: 26px;
+	width: 233px;
+	position: absolute;
+	top: 0;
+}
+#sortby {
+	width: 233px;
+	font-size: 20px;
+	background: #fff;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+}
+button.select:after { /* FIX-THIS - do we need to target button? */
+    position:relative;
+	background: url("../images/Down_Arrow.png") no-repeat;
+    background-size: 11px 11px;
+    width: 11px;
+    height: 11px;
+    content: " ";
+    display: inline-block;
+    float: right;
+    margin-left: 10px;
+	margin-right: -10px;
+    margin-top: 3px;
+}
+
+/* --------------------------------
+	Generic Button styles */
+
+.btn {
+	height:15px;
+	padding:10px 10px 9px 10px;
+
+	-moz-box-shadow: 	2px 2px 2px 0px #CCCCCC;
+	-webkit-box-shadow: 2px 2px 2px 0px #CCCCCC;
+	box-shadow: 		2px 2px 2px 0px #CCCCCC;
+}
+
+
+/* --------------------------------
+	Action Buttons */
+
+.act_btns li {
+	cursor: pointer;
+	display: inline-block;
+	font-size: 12px;
+	font-weight: bold;
+	text-decoration: none;
+	/*text-transform: uppercase;*/
+	zoom: 1;
+	border-right: 1px solid #000000;
+	padding-right: 0;
+	padding-left: 5px;
+}
+.act_btns.carrots a {
+	background-position: right -308px;
+	padding-right: 25px;
+}
+.act_btns li:first-child {
+	padding-left: 0
+}
+.act_btns li:last-child {
+	border: none
+}
+
+/* --------------------------------
+	Button List */
+
+.btns {
+	font-size: 18px
+}
+.btns .icon {
+	display: inline-block;
+	height: 30px;
+	width: 30px;
+	vertical-align: middle;
+	margin-right: 10px;
+}
+.checkmarks .icon,
+.checkmark.icon,
+.btns .remove {
+	width: 32px;
+	height: 32px;
+}
+.btns>li {
+	border: none;
+	background: none;
+	padding: 0;
+	display: block;
+	overflow: hidden;
+}
+.btns>li.hide {
+	display: none;
+}
+.btns>li>a:first-child,
+.btns>li>div:first-child,
+div.btns {
+	display: table-cell;
+	width: 320px;
+	padding: 3px 15px 0 10px;
+	height: 37px;
+	vertical-align: middle;
+	clear: both;
+}
+
+
+/*	----------------------------------------------------------------------------
+	(9) UI Elements */
+
+/*	----------------------------------------
+	(9a) Tabs */
+
+.tabs {
+	vertical-align: top;
+	height: 40px;
+}
+.tabs li {
+	display: inline-block
+}
+.tabs li:first-child {
+	margin-left: 10px
+}
+.tabs a {
+	display: table-cell;
+	text-align: center;
+	height: 39px;
+	text-transform: uppercase;
+	font-size: 12px;
+	vertical-align: middle;
+	color: #666666;
+	font-weight: bold;
+	border: 1px solid #CCCCCC;
+	-moz-border-top-left-radius: 3px;
+	-webkit-border-top-left-radius: 3px;
+	border-top-left-radius: 3px;
+	-moz-border-top-right-radius: 3px;
+	-webkit-border-top-right-radius: 3px;
+	border-top-right-radius: 3px;
+	background-color: #EEEEEE;
+	border-bottom: none;
+	padding: 0;
+}
+.tabs.plp>li:first-child a {
+	width: 122px
+}
+.tabs.plp>li:nth-child(2) a {
+	width: 76px
+}
+.tabs.plp>li:last-child a {
+	width: 88px
+}
+.tabs.workshops a {
+	padding:0 11px;
+}
+.tabs .active {
+	margin-bottom: -1px
+}
+.tabs .active a {
+	color: #333;
+	background-color: #FFF;
+	height: 40px;
+}
+.tabs .disabled a {
+	color: #aaa
+}
+.tabline {
+	border-top: 1px solid #ccc
+}
+
+/*	----------------------------------------
+	(9b) Ratings */
+
+.ratings,
+.stars {
+	background-image: url('../images/StarsLrg@2X.png');
+	background-size: 23px 54px;
+	background-repeat: repeat-x;
+}
+.ratings {
+	display: inline-block;
+	width: 110px;
+	height: 18px;
+	background-position: 0 0px; /* White Stars */
+	vertical-align: middle;
+}
+.btns .ratings {
+	margin-top: 0
+}
+.ratings.grey,
+.checkmarks .ratings {
+	background-position: 0 -18px; /* Grey Stars */
+}
+.ratings .stars {
+	display: inline-block;
+	height: 18px;
+	background-position: 0 -36px; /* Orange Stars */
+	width: 0;
+}
+.ratingsNone .stars {
+	display: block;
+	text-align: center;
+	background: none;
+	font-size: 11px;
+	vertical-align: middle;
+	margin-top: 1px;
+}
+li#reviews>div div {
+	display: inline-block
+}
+li#reviews .ratings {
+	margin-top: -2px;
+	margin-right: 10px;
+}
+.reviews-overallRatings .ratings {
+	/* Grey Stars */
+	background-position: 0 -18px;
+	margin-top: -6px;
+	margin-right: 5px;
+	margin-left: 5px;
+}
+.ratingsQty {
+	float: right;
+	font-weight: normal;
+	font-size: 10px;
+	vertical-align: bottom;
+	margin: 4px 0 0 10px;
+}
+.reviews-overallRatings {
+	padding: 10px
+}
+
+/*	----------------------------------------
+	(9c) Pagination */
+
+.pagination {
+	margin: 20px 0 20px 0;
+	padding: 0;
+	list-style: none;
+	height: 1%;
+	overflow: hidden;
+	text-align:center;
+}
+.pagination li {
+	display: inline-block;
+	margin: 0 3px;
+}
+.pagination li a {
+	display: table-cell;
+	width: 40px;
+	height: 40px;
+	vertical-align: middle;
+	text-align: center;
+	color: #333;
+	background-color: #ccc;
+	font-size: 18px;
+}
+.pagination li.active a {
+	color: #FFF;
+	background-color: #F96302;
+}
+.pagination li:first-child, 
+.pagination li:first-child a, 
+.pagination li:last-child, 
+.pagination li:last-child a {
+	width: 20px;
+	background-color: #FFF;
+}
+.pagination li:first-child a {
+	background: url('../images/OrangeChevronLeft.png') no-repeat;
+	background-size: 10px 10px;
+	background-position: 7px 15px;
+}
+.pagination li:last-child a {
+	background: url('../images/OrangeChevronRight.png') no-repeat;
+	background-size: 10px 10px;
+	background-position: 8px 15px;
+}
+
+
+/*	----------------------------------------
+	(9d) Modal */
+
+.pod-modal-overlay {
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	width:100%;
+	height:100%;
+	overflow:auto;
+	z-index: 1000;
+	background-color: #FFF;
+}
+body.modal-open { 
+	overflow: hidden; /* Prevents the body scrolling when modal is open. */
+}
+.pod-modal-overlay .modal-heading  {
+	background-color: #F9F8F4;
+	font-weight: bold;
+	padding: 20px 0 17px 0;
+	-moz-box-shadow: 0px 3px 3px -2px #999;
+	-webkit-box-shadow: 0px 3px 3px -2px #999;
+	box-shadow: 0px 3px 3px -2px #999;
+	text-align: center;
+}
+.pod-modal-overlay .modal-close {
+	width: 20px;
+	height: 20px;
+	background-position: -63px -639px;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 10px;
+	position:absolute;
+	top:18px;
+	left:20px;
+}
+.pod-modal-overlay .modal-content {
+	padding: 20px 10px;
+}
+.modal-content h5, .modal-content p {
+	margin-bottom: 20px;
+}
+
+/*	----------------------------------------
+	(9e) Inline Player */
+
+.inline-player-wrapper {
+	width: 300px;
+	height: 300px;
+	overflow: hidden;
+	margin: 10px 10px 0 10px;
+}
+#productZoom-wrapper {
+	z-index: 9;
+	margin: 10px;
+	border: solid 1px #EDEDED;
+	height: 302px;
+}
+#productZoom-wrapper {
+	display: none
+}
+#productImg-wrapper ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	width: 900px;
+}
+#productImg-wrapper li {
+	float: left;
+	width: 300px;
+	height: 300px;
+	background: url('../images/ajax-loader.gif') center center no-repeat;
+}
+#productImg-wrapper img,
+#productZoom-wrapper img {
+	width: 300px;
+	height: 300px;
+	border: 1px solid #fff;
+}
+#zoomBtn {
+	display: none;
+	position: absolute;
+	z-index: 99;
+	border: 0px solid lightgreen;
+}
+#plusBtn,
+#minusBtn {
+	position: relative;
+	width: 36px;
+	height: 36px;
+	margin: 5px;
+	z-index: 99;
+}
+#plusBtn {
+	background-position: -64px -1280px
+}
+#minusBtn {
+	background-position: 0px -1280px
+}
+.productImage {
+	position: relative;
+	height: 315px;
+	overflow: hidden;
+	-webkit-user-select: none;
+	-webkit-touch-callout: none;
+	-webkit-tap-highlight-color: transparent;
+}
+.productImage .notice {
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+	background: rgba(0,0,0,0.5);
+	width: 200px;
+	height: 26px;
+	border-radius: 3px;
+	padding: 14px 10px 0 10px;
+	position: absolute;
+	top: 42%;
+	left: 15%;
+	color: #fff;
+	font-weight: 500;
+	z-index: 98;
+}
+.productImage .notice .icon {
+	display: inline-block;
+	background-position: -30px -612px;
+	height: 20px;
+	width: 20px;
+	margin-top: -5px;
+	margin-right: 10px;
+	vertical-align: middle;
+}
+
+/*	----------------------------------------
+	(9f) Video */
+
+.videoList li {
+	background: #666666;
+	margin-bottom: 1px;
+	padding: 10px;
+	color: #FFFFFF;
+	height: 1%;
+	overflow: hidden;
+}
+.videoList li.errorText {
+	background-color: #FFF;
+}
+.videolist-left {
+	color: #fff;
+	width: 150px;
+	float: left;
+}
+.videolist-left a {
+	color: #fff
+}
+.videolist-leftCopy {
+	margin-bottom: 15px;
+	height: 77px;
+	overflow: hidden;
+}
+.videolist-right {
+	width: 140px;
+	float: right;
+	color: #fff;
+}
+.videolist-vidThumbnail {
+	width: 140px;
+	height: 100px;
+	margin-bottom: 10px;
+	background: #fff;
+	display: block;
+	position: relative;
+}
+.videolist-vidThumbnail img {
+	width: 140px;
+	height: 100px;
+}
+.play-video-overlay {
+	position: relative;
+	margin-top: -210px;
+	margin-left: 90px;
+	content: " ";
+	width: 100px;
+	height: 100px;
+	background-color:#FFF;
+	opacity: 0.8;
+	-moz-opacity: .80;
+	-moz-border-radius: 9px;
+	-webkit-border-radius: 9px;
+	border-radius: 9px;
+}
+.play-video-overlay:after {
+	position:relative;
+	margin-top:30px;
+	margin-left:35px;
+	content: " ";
+	display: inline-block;
+	width: 0px;
+	height: 0px;
+	padding: 0 15px 0 0;
+	border-top: 20px solid transparent;
+	border-bottom: 20px solid transparent;
+	border-left: 30px solid #000;
+}
+.play-video-overlay.loading:after {
+	border: none;
+	margin-top:34px;
+	margin-left:33px;
+	width:32px;
+	height:32px;
+	background: url('../images/ajax-loader.gif') no-repeat;
+}
+.play-video-overlay.error p {
+	vertical-align:middle;
+	text-align:center;
+	font-size: 14px;
+	font-weight: bold;
+	padding:25px 10px 0 10px;
+}
+.play-video-overlay.error:after {
+	border: none;
+}
+.videolist-playBtn {
+	padding: 0 15px 0 0;
+	position: absolute;
+	top: 27px;
+	left: 60px;
+	content: " ";
+	width: 0px;
+	height: 0px;
+	border-top: 20px solid transparent;
+	border-bottom: 20px solid transparent;
+	border-left: 30px solid #FFF;
+	font-size: 0px;
+	line-height: 0px;
+	margin: 0 auto;
+	opacity: 0.7;
+	-moz-opacity: .70;
+	filter: alpha(opacity=70); /* For IE8 and earlier */
+}
+.videolist-playBtn.videoPlayS {
+	top: 67px;
+	left: 140px;
+	border-top: 30px solid transparent;
+	border-bottom: 30px solid transparent;
+	border-left: 50px solid #FFF;
+}
+.videoPod {
+	width: 211px;
+	height: auto;
+	background: #666666;
+	padding: 20px 55px 0px 54px;
+	position:relative;
+}
+.videoPod .videolength {
+	color: #FFFFFF;
+	padding: 10px 20px 10px 20px;
+}
+
+/*	----------------------------------------
+	(9g) Map */
+
+#map,
+#detailsMap {
+	height: 170px;
+	width: 100%;
+}
+#map {
+	height: 320px
+}
+.green-poi {
+	/*background-posiiton: 180px 125px;*/
+	padding-top: 7px;
+	text-align: center;
+	overflow: hidden;
+	width: 29px;
+	height: 40px;
+	font-weight: bold;
+	z-index: 999;
+	background: url('../images/map-poi-grn.png');
+}
+.orange-poi {
+	/*background-posiiton: 180px 125px;*/
+	padding-top: 7px;
+	text-align: center;
+	overflow: hidden;
+	width: 29px;
+	height: 40px;
+	font-weight: bold;
+	background: url('../images/map-poi-org.png');
+}
+.green-poi .handle,
+.orange-poi .handle {
+	width: 29px;
+	height: 40px;
+}
+
+
+/*	----------------------------------------------------------------------------
+	(10) Content */
+#images {
+	margin: 10px 10px 0 10px
+}
+#imagenumber {
+	text-align: center
+}
+
+#imagenumber li {
+	display: inline-block;
+	height: 9px;
+	width: 9px;
+	background-position: -78px -198px;
+	margin: 0 -1px;
+}
+#imagenumber li.current {
+	background-position: -64px -198px
+}
+#detail {
+
+}
+#detail #price {
+	font-size: 30px;
+	font-weight: bold;
+	display: inline;
+	line-height: 100%;
+}
+#detail #brand,
+#detail #product {
+	font-size: 14px
+}
+
+
+/*	----------------------------------------------------------------------------
+	(11) Modules */
+
+/*	----------------------------------------
+	(11a) Header */
+
+#THD_logo {
+	position: relative;
+	display: block;
+	height: 61px;
+	width: 62px;
+	margin-left: 10px;
+	background-color: #FFF;
+	background-position: 0 0;
+	-moz-box-shadow: 0px 0px 5px 0px #999;
+	-webkit-box-shadow: 0px 0px 5px 0px #999;
+	box-shadow: 0px 0px 5px 0px #999;
+	text-decoration: none;
+	z-index: 1000;
+}
+.mw-top-nav {
+	display: block;
+	height: 55px;
+	margin-top: -61px;
+	-moz-box-shadow: 0 5px 6px -5px #999;
+	-webkit-box-shadow: 0 5px 6px -5px #999;
+	box-shadow: 0 5px 6px -5px #999;
+	background-color: #F9F8F4;
+}
+header nav li a {
+	display: inline-block;
+	float: right;
+	margin-top: 8px;
+	width: 80px;
+	text-align: center;
+	border-right: 1px solid #CCC;
+	text-decoration: none;
+	color: #999;
+	font-size: 10px;
+}
+header nav li:first-child a {
+	border-right: 1px solid #F9F8F4
+}
+header nav .icon {
+	height: 28px;
+	width: 30px;
+	margin: 0 auto;
+	clear: both;
+}
+#viewCart {
+	position: relative;
+}
+#cartQty {
+	position: absolute;
+	display: none;
+	z-index: 999;
+	left: 36px;
+	top: 5px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	padding:2px;
+	border-radius: 4px;
+	background-color: #FFF;
+	font-size: 12px;
+}
+#cartQty>span {
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	padding: 0px 2px;
+	background-color: #F96302;
+	color: #FFFFFF;
+	font-weight: bold;
+}
+#Shop_All {
+	display: inline-block;
+	margin: 13px 0 0 10px;
+	background-color: #666;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	-moz-box-shadow: 	none;
+	-webkit-box-shadow: 	none;
+	box-shadow: 		none;
+
+}
+#Shop_All .icon {
+	display: inline-block;
+	height: 14px;
+	width: 14px;
+	margin-right: 10px;
+	background-position: -70px -248px;
+}
+#Shop_All.open .icon {
+	background-position: -70px -278px
+}
+
+/* --------------------------------
+	Shop All Drop Down and Btns */
+
+#shopAllList {
+	position: absolute;
+	width: 320px;
+	z-index: 200;
+	margin-top: -4px !important;
+	display: none;
+	overflow: visible;
+}
+#shopAllList .tongue {
+	/* height: 13px; */
+	padding: 0;
+	margin: 0 0 0 10px;
+	background-color: #646464;
+}
+#shopAllList .btns {
+	width: 300px;
+	margin: 0 10px;
+}
+#shopAllList li a {
+	-webkit-tap-highlight-color: rgba(249,99,2,0.3);
+	background-color: #666;
+	color: #fff;
+	border-bottom: solid 1px #666;
+}
+#shopAllList li a:active {
+	background-color: #F96302
+}
+#shopAllList li.drkGray_btn a,
+#shopAllList li.orangeSolid_btn a {
+	background-color: #333
+}
+#shopAllList li.thd_orange a {
+	background-color: #F96302
+}
+
+/* --------------------------------
+	Seasonal Colors for btns */
+
+#shopAllList li.holiday_btn a {
+	background-color: #af1c35
+}
+#shopAllList li.specialBuy_btn a {
+	background-color: #ED1C24
+}
+#shopAllList li.nlpGreen_btn a {
+	background-color: #00AE4D
+}
+#shopAllList li.outdoorGarden_btn a {
+	background-color: #acb335
+}
+#shopAllList li.goldenrod_btn a {
+	background-color: #FFC20E
+}
+#shopAllList li.clearance_btn a {
+	background-color: #FFFF00
+}
+
+/* --------------------------------
+	Search */
+.search input[type=submit] {
+	position: relative;
+	height: 36px;
+	width: 36px;
+	border: none;
+	margin-top: 1px;
+	margin-left: -40px;
+	background-color: transparent;
+	background-position: -58px -536px;
+	cursor: pointer;
+	z-index: 102;
+
+	-moz-box-shadow: 	none;
+	-webkit-box-shadow: 	none;
+	box-shadow: 		none;
+
+}
+.search input[type=button]#searchClear {
+	position: relative;
+	height: 36px;
+	width: 34px;
+	border: none;
+	margin-top: 13px;
+	margin-left: -34px;
+	background-color: transparent;
+	background-position: 0px -237px;
+	cursor: pointer;
+	z-index: 105;
+	-moz-box-shadow: 		none;
+	-webkit-box-shadow: 	none;
+	box-shadow: 			none;
+}
+input#searchField {
+	position: relative;
+	width: 175px;
+	margin: 13px 0 0 5px;
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+input#searchCancel {
+	margin: 13px 10px 0 0;
+	float: right;
+	-moz-box-shadow: 		none;
+	-webkit-box-shadow: 	none;
+	box-shadow: 			none;
+	padding-top:8px;
+	height: 37px;
+}
+
+/* --------------------------------
+	Search Suggestions*/
+
+#searchOverlay {
+	display: none;
+	opacity: 0.0;
+	filter: alpha(opacity=0);
+	position: absolute !important;
+	z-index: 103;
+	background-color: white;
+	width: 320px;
+	height: 100%;
+}
+#suggestions {
+	position: absolute;
+	width: 320px;
+	z-index: 104;
+	margin-top: 10px !important;
+	display: none;
+}
+#suggestions ul {
+	width: 298px;
+	margin: 0 10px;
+	border: 1px solid #CCC;
+	background-color: #DDD;
+}
+#suggestions a,
+#suggestions div {
+	border-bottom: 1px solid #CCC
+}
+#suggestions li:last-child a,
+#suggestions li:last-child div {
+	border-bottom: none
+}
+#suggestions a.sub {
+	padding-left: 22px;
+}
+#suggestions .clrHist {
+	color: #666;
+	font-size: 14px;
+	font-weight: normal;
+	text-decoration: underline;
+}
+
+/*	----------------------------------------
+	(11b) Footer */
+
+footer {
+	padding: 20px 0 20px 0;
+	float: left;
+}
+footer ul#floor {
+	text-align: center
+}
+footer ul#floor li {
+	display: inline-block;
+	height: 12px;
+	border-right: 1px solid #999;
+}
+footer ul#floor li:last-child {
+	border-right: none
+}
+footer ul#floor li a {
+	color: #666666;
+	width: 100%;
+	height: 12px;
+	font-size: 12px;
+	vertical-align: text-top;
+	text-decoration: none;
+	padding: 0 11px 0 9px;
+	line-height: 100%;
+}
+#storeinfo {
+	background-color: #DDD;
+	font-size: 16px;
+}
+#storeinfo a:after {
+	background-position: right -305px;
+	position:relative;
+	width: 20px;
+	height: 20px;
+	content: " ";
+	display:inline-block;
+	float:right;
+	margin-top: -20px;
+	margin-right: -16px;
+	/*margin-top: -40px;*/
+}
+#storeinfo a.tall:after {
+	margin-top: -30px;
+}
+#storeinfo #store-name {
+	font-size: 18px;
+}
+
+#storeinfo #store-hours {
+	color: #888;
+	font-size: 16px;
+}
+#storeinfo a.tall {
+	height: 60px;
+}
+#storeinfo .open {
+	color: grey;
+}
+#storeinfo .closed {
+	color: grey;
+}
+li.in-store-link  a {
+	padding: 15px 0;
+	display: block;
+	background-position: right -290px;
+}
+
+/*	----------------------------------------
+	(11c) Buy Box */
+
+/* MOBILE SPECIFIC STYLES
+-------------------------------------------------------------*/
+.mw .buy-box .radio span {
+	display: inline;
+}
+.mw .radio p.bb-inline > span {
+	display: inline;
+}
+.mw .buy-box .button-wrapper {
+	display: inline-block;
+}
+.mw .buy-box .button-wrapper p {
+	margin-left: 0;
+	margin-bottom: 0;
+}
+
+.mw .icon-attention,
+.mw .icon-close {
+	display:block;
+	width:14px;
+	height:14px;
+	background-position: -36px -736px;
+	vertical-align:top;
+	float: left;
+}
+.mw .icon-attention {
+	background-position: -36px -736px;
+}
+.mw .icon-close {
+	background-position: -52px -736px;
+}
+
+.buy-box #quantity {
+	margin-left: 10px;
+	width: 32px;
+	height: 32px;
+	text-align: center;
+	vertical-align: middle;
+}
+#mComLink {
+	padding-top: 10px;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+#mComLink .btn {
+	margin-left: 5px;
+	padding: 0 5px;
+	height: 32px;
+	vertical-align: middle;
+}
+#mComLink #ajaxLoader {
+	vertical-align: middle;
+	display: inline-block;
+	text-align: center;
+	width: 108px;
+}
+
+
+/*	----------------------------------------------------------------------------
+	(12) POD */
+
+/*	----------------------------------------
+	(12a) POD - GENERICS */
+
+.pod-banner-temp {
+	float: none;
+	clear: both;
+	display: table-cell;
+	width: 320px;
+	height: 40px;
+	border: none;
+	margin-top: 1px;
+	background-color: #333333;
+	color: #FFFFFF;
+	text-align: center;
+	vertical-align: middle;
+}
+.pod-mystore {
+	background-color: #CCCCCC;
+	padding: 0;
+	border-bottom: 1px solid white;
+}
+.pod-mystore .carrot {
+	background-position: right -308px
+}
+.pod-mystore>li {
+	display: inline-block;
+	border-right: 1px solid #FFFFFF;
+}
+.pod-mystore a {
+	display: block;
+	padding: 10px 5px 10px 5px;
+	text-align: center;
+}
+.pod-mystore h5 {
+	margin-top: 5px
+}
+.pod-mystore li {
+}
+.pod-mystore li:first-child {
+	width: 170px;
+}
+.pod-mystore li:nth-child(2) {
+	width: 55px;
+}
+.pod-mystore>li:last-child {
+	width: 85px;
+	border-right: none;
+}
+.pod-mystore .carrot {
+	display: inline-block;
+	padding-right: 25px;
+	margin-right: -10px;
+}
+.pod-call .btn {
+	display: inline-block;
+	float: right;
+	width: 90px;
+	font-size: 18px;
+	text-align: center;
+	margin-top: 4px;
+	padding-top: 9px;
+	padding-bottom: 14px;
+}
+.pod-call>div {
+	display: inline-block;
+	text-align: center;
+}
+.pod-call .call-text {
+	text-transform: uppercase;
+	font-size: 12px;
+	margin: 2px 0 5px 0;
+}
+.pod-call .call-number {
+	font-size: 22px;
+	letter-spacing: 1px;
+}
+.pod-contact {
+	display: table-row;
+	width: 320px;
+	height: 60px;
+}
+.pod-contact>a {
+	display: table-cell;
+	width: 150px;
+	height: 58px;
+	padding-left: 10px;
+	border-top: 1px solid #CCCCCC;
+	border-bottom: 1px solid #CCCCCC;
+	vertical-align: middle;
+}
+.pod-contact>a:first-child {
+	border-right: 1px solid #CCCCCC
+}
+.pod-contact .tel {
+	background-position: 0 -180px;
+	width: 30px;
+	height: 30px;
+	float: left;
+	display: inline-block;
+}
+.pod-contact .sms {
+	background-position: -30px -180px;
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+	float: left;
+}
+.pod-finder {
+	background: #EEEEEE;
+	width: 320px;
+	height: 60px;
+	display: table-cell;
+	vertical-align: middle;
+}
+.pod-finder>input[type="text"] {
+	width: 150px
+}
+.pod-refinedby a {
+	font-size: 12px
+}
+.pod-refinedby li:last-child {
+	border-top: 1px solid #DDDDDD;
+	padding-bottom: 0px;
+}
+.pod-refinedby .icon {
+	margin-left: -10px
+}
+.pod .content_image {
+	position: relative
+}
+.pod .item_description {
+	display: block
+}
+.pod .title,
+.pod h3 {
+	margin: 15px 0 10px 0;
+	display: block;
+}
+.pod ul:not(#pipMenu,
+.headerMenu) {
+	padding: 0 0 10px 0
+}
+.pod .content_image.left {
+	display: inline-block;
+	padding: 0 10px 0 0;
+}
+.pod .content_image.left + .title {
+	padding: 7px 10px 5px 0
+}
+.pod .content_image .dynamic_btn {
+	position: absolute;
+	top: 70px;
+	left: 22px;
+}
+.pod .xlarge.item_price {
+	font-weight: bold;
+	display: block;
+	margin: 0 0 -3px 0;
+	color: #000;
+}
+.pod .item_pricing_wrapper .item_stike_price {
+	text-decoration: line-through;
+	color: #777777;
+	font-size: 12px;
+}
+.pod .item_pricing_wrapper .xlarge {
+	font-size: 22px;
+	font-weight: bold;
+}
+.pod .value_icon {
+	position: absolute;
+	width: 45px;
+	height: 45px;
+	bottom: 10px;
+	left: -5px;
+	background: red;
+	text-indent: -9999px;
+}
+.pod .savings_message {
+	position: absolute;
+	top: 15px;
+	left: -10px;
+	background: #f96302;
+	font-weight: bold;
+	color: #fff;
+	text-align: right;
+	padding: 4px 6px 3px 13px;
+	cursor: default;
+}
+.pod .reviews {
+	display: block;
+	margin: 0 0 15px 0;
+}
+.pod .reviews .stars {
+	width: 80px;
+	background: yellow;
+	height: 15px;
+	padding: 0 5px 0 0;
+	float: left;
+}
+.pod .reviews .review_count {
+	float: left
+}
+.pod .availibility {
+	font-weight: bold;
+	font-size: 12px;
+	display: block;
+	color: #777;
+	float: none;
+	clear: both;
+}
+.pod .twoColumn .linkList:first-child {
+	float: left
+}
+.pod .twoColumn .linkList {
+	float: right;
+	width: 48%;
+}
+.pod .twoColumn li {
+	padding-top: 10px
+}
+
+/*	----------------------------------------
+	(12b) POD - PLP */
+
+.pod-PLP li {
+	border-bottom: 1px solid #CCCCCC;
+}
+.pod-PLP li:first-child {
+	border-top: 1px solid #CCCCCC;
+}
+.pod-PLP a {
+	display: block;
+	padding: 20px 0;
+	height: 1%;
+	overflow: hidden;
+}
+.pod-PLP img {
+	float: left;
+	margin-right: 10px;
+}
+.pod-PLP h2,
+.pod-PLP h3 {
+	margin: 0
+}
+.pod-PLP .price {
+	font-size: 18px;
+	font-weight: bold;
+	margin-top: 0;
+}
+.pod-PLP .alt-price {
+	font-size: 12px;
+	font-weight: bold;
+	color: #999999;
+	height: 20px;
+}
+.alt-price .price-savings {
+	color: #00AE4D;
+	margin-left: 30px;
+}
+.pod-PLP .product {
+	font-size: 14px;
+	line-height: 18px;
+	font-weight: normal;
+	height: 38px;
+	overflow: hidden;
+	display: block;
+}
+.pod-PLP .ratings {
+	/*Grey Stars*/
+	background-position: 0 -14px;
+	background-size: 18px 42px;
+	height: 14px;
+	width: 90px;
+}
+.pod-PLP .stars {
+	height: 14px;
+	background-position: 0 -28px;
+	background-size: 18px 42px;
+}
+.pod-PLP img {
+	width: 100px;
+	height: 100px;
+}
+
+/* --------------------------------
+	Generic Pod Styles */
+
+.pod-doc h3,
+.pod-doc h4 {
+	margin: 15px 0 10px 0
+}
+.pod-content h1 {
+	margin: 20px 0
+}
+.pod-content h4,
+.pod-content p {
+	margin: 10px 0
+}
+.pod-content h5 {
+	font-size: 14px
+}
+
+/* --------------------------------
+	Email Signup */
+
+.pod-email {
+	margin: 0 10px 20px 10px
+}
+.pod-email p {
+	margin: 5px 0;
+	line-height: 20px;
+}
+.pod-email input[type="email"] {
+	width: 190px;
+}
+.pod-email input[type="submit"] {
+	margin-left: -2px;
+	text-transform: uppercase
+}
+.pod-email .error {
+	border: 1px solid red;
+	padding: 10px 10px 0 10px;
+}
+.pod-email .attention {
+	display: inline-block;
+	background-color: red;
+	color: #FFF;
+	width: 20px;
+	height: 18px;
+	text-align: center;
+	padding-top: 2px;
+	margin-right: 6px;
+}
+
+/* --------------------------------
+	PLP extensions*/
+
+.iconbox {
+	float: left;
+	width: 25px;
+}
+.fRightNoReview {
+	float: center;
+	margin: -18px 0 0;
+	position: absolute;
+	right: 570px;
+}
+.readAll {
+	/*margin: 10px 0;
+	padding-bottom: 10px;*/
+	height:40px;
+	border-bottom: 1px solid #ccc;
+}
+.readAll a {
+	display:table-cell;
+	height: 40px;
+	width: 320px;
+	vertical-align: middle;
+	padding: 0 15px;
+}
+#authStatus,
+#accountStatus {
+	background-color: #DDDDDD;
+	font-weight: bold;
+	line-height: 40px;
+	padding: 0 10px;
+}
+
+#accountStatus {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+#accountStatus .account_small {
+	font-size: 14px;
+	font-weight: normal;
+}
+
+/*	----------------------------------------
+	(12c) POD - PIP */
+
+/* --------------------------------
+	PIP Pricing */
+
+.pod-pricing>div {
+	font-size: 12px;
+	font-weight: bold;
+	margin-bottom:5px;
+}
+.pod-pricing .unit-price {
+	margin-top: 5px;
+}
+.pod-pricing .prev-price {
+	color: #999999;
+}
+.pod-pricing .price-savings {
+	color: #00AE4D;
+	margin-left: 10px;
+}
+.pod-pricing .valid-thru .plus {
+	background-position: right -428px;
+	padding-right: 30px;
+}
+
+/* --------------------------------
+	Value Pricing Badge */
+
+.pod-value-badge {
+	display:inline-block;
+	float:left;
+	width: 40px;
+	height: 42px;
+	margin-right:10px;
+}
+.pod-value-badge.lower-price {
+	background-position: 0px -765px;
+}
+.pod-value-badge.overstock {
+	background-position: -42px -765px;
+}
+.pod-value-badge.special-buy {
+	background-position: 0px -806px;
+}
+
+/* --------------------------------
+	PIP Reviews */
+
+.pod-review {
+	margin: 10px 15px;
+}
+.pod-review .ratings {
+	/* Grey Stars */
+	background-position: 0 -18px;
+	margin-top: -6px;
+	margin-right: 10px;
+}
+.pod-review .reviewTxt {
+	line-height: 25px;
+}
+.pod-review li:last-child {
+	line-height: 25px
+}
+.pod-review .moreLink {
+	display: none;
+	margin-top: -10px;
+}
+
+/* --------------------------------
+	Pod - In Store Map */
+
+.pod-ISM-storeheading {
+	background-color: #F9F8F4;
+	font-weight: bold;
+	padding: 20px;
+	-moz-box-shadow: 0px 3px 3px -2px #999;
+	-webkit-box-shadow: 0px 3px 3px -2px #999;
+	box-shadow: 0px 3px 3px -2px #999;
+}
+.pod-ISM-storeheading .icon {
+	width: 20px;
+	height: 20px;
+	background-position: -64px -640px;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 10px;
+}
+#pod-ISM-product {
+	position: fixed;
+	bottom: 0;
+	width: 300px;
+	display: block;
+	z-index: 110;
+	background-color: #F9F8F4;
+	padding: 10px;
+	overflow: hidden;
+}
+#pod-ISM-product img {
+	height: 100px;
+	width: 100px;
+	background: #CCC;
+	float: left;
+	margin-right: 10px;
+}
+#pod-ISM-info {
+	display: inline-block;
+	vertical-align: top;
+}
+#pod-ISM-info .instore>.column {
+	display: inline-block;
+	text-align: center;
+}
+#pod-ISM-info .instore .column:not(:last-child) {
+	margin-right: 5px
+}
+
+/* --------------------------------
+	PIP Description */
+
+#description dl {
+	margin: 10px 0 0 10px
+}
+#description dt {
+	width: 120px
+}
+#description dd {
+	width: 180px
+}
+#description p {
+	margin-bottom: 15px
+}
+
+/* --------------------------------
+	PIP Specifications */
+
+#specifications dt,
+#specifications dd {
+	padding: 10px 0 10px 10px;
+	border-top: 1px solid #EEEEEE;
+	min-height: 30px;
+}
+#specifications dd {
+	padding: 10px 10px 10px 20px;
+}
+#specifications dt {
+	width: 105px;
+	clear: left;
+}
+#specifications dd {
+	width: 175px;
+	clear: right;
+}
+#specifications dt:first-child,
+#specifications dd:nth-child(2) {
+	border-top: none
+}
+
+/* --------------------------------
+	PIP Shipping Options */
+
+#shippingoptions p {
+	font-size: 14px;
+}
+
+/*	----------------------------------------
+	(12d) POD - Storefinder */
+
+.pod-findstore {
+	padding: 10px 0 10px 10px
+}
+.pod-findstore .btn {
+	width: 80px;
+	text-align: center;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+.pod-findstore input[type=text] {
+	margin-top: 2px;
+	width: 149px;
+}
+.pod-store li a {
+	display: inline-block
+}
+.pod-store .plus {
+	background-position: right -427px;
+	padding-right: 30px;
+}
+.pod-store .distance {
+	float: right;
+	color: #666666;
+}
+
+/*	----------------------------------------
+	(12e) POD - Documentum */
+
+.grid_1,
+.grid_12 {
+	width: 320px
+}
+/* grid_1 & grid_12 are equivalent */
+.grid_2,
+.grid_6 {
+	width: 160px
+}
+.grid_1,
+.grid_2,
+.grid_6,
+.grid_12 {
+	display: inline;
+	float: left;
+	position: relative;
+}
+.pod p {
+	margin: 0 0 10px 0
+}
+.invisible {
+	display: none
+}
+.pod .header {
+	font-size: 14px;
+	line-height: 15px;
+	width: auto;
+}
+.pod .spad,
+.pod.spad {
+	margin: 10px
+}
+.landing-image {
+	float: left;
+	margin-right: 10px;
+}
+.withBorder {
+	border-bottom: solid #DDD 1px
+}
+.pad-side .pod-findstore {
+	padding: 0
+}
+.pad-side .pod-findstore input[type=text] {
+	margin-top: 1px;
+	width: 153px;
+}
+
+/*	----------------------------------------
+	(12f) POD - Hero */
+
+.pod .hero_info {
+	position: absolute;
+	width: 280px;
+	height: auto;
+	padding: 20px;
+	top: 0;
+	color: white;
+	text-shadow: 1px 2px 4px #333;
+}
+.pod .hero_info h1 {
+	font-size: 28px;
+	font-weight: bold;
+	letter-spacing: -1pt;
+	line-height: 0.9;
+	display: block;
+}
+.pod .hero_info h2 {
+	font-size: 24px;
+	font-weight: bold;
+	letter-spacing: -1pt;
+	line-height: 0.9;
+	display: block;
+}
+.pod .hero_info h3 {
+	line-height: 1;
+	display: block;
+}
+.pod .hero_info .dynamic_btn {
+	margin-top: 15px
+}
+
+
+
+/* --------------------------------
+	Swipeable Nav */
+
+.swipable-image-nav .inline-player {
+	padding-top: 10px;
+}
+.swipable-image-nav .hero {
+	position: absolute;
+	bottom:10px;
+}
+.mw .swipable-image-indicator .video-counter {
+	background-position: -20px -737px;
+	width: 12px;
+	height: 12px;
+	margin-left:5px;
+}
+.mw .swipable-image-indicator .video-counter.active {
+	background-position: -3px -737px;
+}
+
+/* --------------------------------
+	Banners */
+
+#topBanner,
+#topBanner a,
+#pod-banner-upper a,
+#pod-banner-lower a {
+	display: block
+}
+#topBanner a {
+	height: 50px
+}
+#topBanner .android,
+#topBanner .iPhone {
+	float: left;
+	margin: 10px 0 10px 24px;
+	display: inline-block;
+	width: 30px;
+	height: 33px;
+}
+.close {
+	float: right;
+	width: 30px;
+	height: 30px;
+	z-index: 800;
+	margin: 10px 16px auto 0;
+	cursor: pointer;
+	vertical-align: middle;
+}
+#topBanner .content {
+	text-align: center;
+	font-size: 12px;
+	padding: 10px 56px 10px 0;
+	font-weight: bold;
+}
+#btmBanner {
+	position: fixed;
+	bottom: 0;
+	width: 320px;
+	margin-bottom: 5px;
+	display: block;
+	z-index: 110;
+}
+#btmBanner .close {
+	margin: 6px 12px auto 0
+}
+#btmBanner .content {
+	-moz-box-shadow: 0px 2px 7px 0px #999;
+	-webkit-box-shadow: 0px 2px 7px 0px #999;
+	box-shadow: 0px 2px 7px 0px #999;
+	text-align: center;
+	padding: 14px 14px 14px 0;
+	font-size: 12px;
+}
+#btmArrow {
+	content: " ";
+	width: 0px;
+	height: 0px;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 10px solid #F96302;
+	font-size: 0px;
+	line-height: 0px;
+	margin: 0 auto;
+}
+
+
+/*	----------------------------------------
+	(12g) POD - Recommended */
+
+#PRP {
+	width: 320px
+}
+#PRP .spacer {
+	height: 29px;
+	border-bottom: 1px solid #CCC;
+}
+#PRP .spacer h3 {
+	margin: 10px 0 5px 15px
+}
+.pod-recProd>div {
+	padding: 0 0 10px 10px;
+	float: left;
+	background-color: #fff;
+	width: 150px;
+}
+.pod-recProd .relatedprice {
+	text-align: center;
+	font-weight: bold;
+}
+.pod-recProd img {
+	width: 145px;
+	height: 145px;
+}
+.pod-recProd div {
+	width: 150px;
+	margin-top: 10px;
+}
+.pod-recProd .ratings {
+	margin: 2px 0 0 20px;
+	font-size: 12px;
+}
+.pod-workshop-list>li {
+	padding:15px 10px 5px 10px;
+	border-bottom:1px solid #EEE;
+	overflow: hidden;
+}
+.pod-workshop-list .head {
+	background:none;
+	padding-right: 0;
+}
+.pod-workshop-list .head:before {
+	display:block;
+	width: 12px;
+	height: 12px;
+	content: " ";
+	float:right;
+	background-repeat: no-repeat;
+	background-position: -42px -714px; /* Grey */
+}
+.pod-workshop-list .head.open:before {
+	background-position: -73px -714px; /* Grey */
+}
+.pod-workshop-list h4 {
+	font-size: 14px;
+}
+.pod-workshop-list .datetime {
+	color: #999;
+	font-weight:normal;
+	font-size: 12px;
+	margin: 10px 0;
+}
+.pod-workshop-list .datetime:before {
+	display:inline-block;
+	margin-top: -4px;
+	margin-right: 5px;
+	width: 16px;
+	height: 16px;
+	background-position: -10px -712px;
+	content: " ";
+	vertical-align: middle;
+}
+.pod-workshop-list>li li {
+	margin: 10px 0;
+}
+.rev_ratingXs,
+.Xpush {
+	height: 25px
+}
+.rev_ratings {
+	position: absolute;
+	bottom: 0;
+}
+.recprod_detailwrap {
+	position: relative;
+	border: 0px solid red;
+}
+.recprod_content .rev_ratings {
+	padding-top: 25px
+}
+
+
+
+/*	----------------------------------------------------------------------------
+	(13) Overrides - Keep at the very end of the page  */
+.hide {
+	display: none;
+}
+.disabled {
+	opacity: 0.5;
+	-moz-opacity: .50;
+	filter: alpha(opacity=50); /* For IE8 and earlier */
+	cursor: default;
+}
+.refinecertona {
+	margin-top: 40px;
+	font-weight: normal;
+}
+.line {
+	border-bottom: 1px solid #CCCCCC;
+	padding-bottom: 10px;
+}
+.relatedname {
+	height: 55px
+}
+.test {
+	position: absolute;
+	width: auto;
+	display: none;
+}

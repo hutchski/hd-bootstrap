@@ -1,0 +1,44 @@
+/* Styles for placing Glyphs on page */
+.glyph {
+	font-size: 24px;
+	float: left;
+	text-align: center;
+	background: #eee;
+	padding: .75em;
+	margin: .75em 1.5em .75em 0;
+	width: 7.5em;
+	border-radius: .25em;
+	box-shadow: inset 0 0 0 1px #f8f8f8, 0 0 0 1px #CCC;
+}
+.glyph input {
+	font-family: consolas, monospace;
+	font-size: 13px;
+	width: 100%;
+	text-align: center;
+	border: 0;
+	box-shadow: 0 0 0 1px #ccc;
+	padding: .125em;
+}
+.box1 {
+	font-size: 24px;
+	display: inline-block;
+	width: 15em;
+	padding: .25em .5em;
+	background: #eee;
+	margin: .5em 1em .5em 0;
+}
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+	font-family: 'hd-custom';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+/* End Glyphps placement */
+
+ .visuallyhidden {display:none;}

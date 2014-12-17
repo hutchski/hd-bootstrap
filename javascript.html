@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>HD Bootstrap | Javascript</title>
+    <!-- Bootstrapping theme CSS -->
+    <link href="css/bootstrap/bootstrap.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/bootstrap/theme.css" rel="stylesheet">    
+
+    <!-- MW/TW ASSETS -->
+    <link href="css/buttons.css" rel="stylesheet">
+    <link href="css/forms.css" rel="stylesheet">
+    <link href="css/icons.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">HD Bootstrap</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="css.html">CSS</a></li>
+            <li class="active"><a href="javascript.html">JS</a></li>
+            <li><a href="components.html">Components</a></li>
+            <li><a href="mobile.html">Mobile</a></li>
+            <li><a href="tablet.html">Tablet</a></li>
+            <!--<li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Nav header</li>
+                <li><a href="#">Separated link</a></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li>-->
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <!-- Docs page layout -->
+    <div class="bs-header" id="content">
+      <div class="container">
+        <h1>JavaScript</h1>
+        <p>Custom javascript and jQuery.</p>
+      </div>
+    </div>
+
+
+    <div class="container bs-docs-container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="bs-sidebar hidden-print" role="complementary">
+            <ul class="nav bs-sidenav">
+              <li><a href="#linting">Linting</a></li>
+              <li><a href="#spacing">Spacing</a><li>
+              <li><a href="#bad-examples">Bad Examples</a></li>
+              <li><a href="#good-examples">Good Examples</a></li>
+              <li><a href="#objects">Objects</a></li>
+              <li><a href="#arrays-and-function-calls">Arrays and Function Calls</a></li>
+              <li><a href="#multi-line-statements">Multi-line Statements</a></li>
+              <li><a href="#chained-method-calls">Chained Method Calls</a></li>
+              <li><a href="#assignments">Assignments</a></li>
+              <li><a href="#equality">Equality</a></li>
+              <li><a href="#type-checks">Type Checks</a></li>
+              <li><a href="#comments">Comments</a></li>
+              <li><a href="#quotes">Quotes</a></li>
+              <li><a href="#semicolons">Semicolons</a></li>
+              <li><a href="#naming-conventions">Naming Conventions</a></li>
+              <li><a href="#global-variables">Global Variables</a></li>
+              <li><a href="#dom-node-rules">DOM Node Rules</a></li>
+              <li><a href="#switch-statements">Switch Statements</a></li>              
+            </ul>
+          </div>
+        </div>
+
+<div class="col-md-9" role="main">
+
+<!-- Overview
+  ================================================== -->
+  <div class="bs-docs-section">
+    <div class="page-header">
+      <h1 id="js-overview">Overview</h1>
+    </div>
+
+    <h3 id="js-individual-compiled">Resource Links.</h3>
+    <p><a href="http://contribute.jquery.org/style-guide/js/">JQuery JavaScript Style Guide</a></p>
+    <p><a href="http://javascript.crockford.com/code.html">Crockford's JS Style Guide</a></p>
+
+<h1 class="entry-title">JavaScript Style Guide</h1>
+    <hr> 
+
+<h2 class="toc-linked"><a href="#linting" id="linting" class="icon-link"><span class="visuallyhidden">link</span></a> Linting</h2><p>Use JSHint to detect errors and potential problems. Every jQuery project has a
+Grunt task for linting all JavaScript files: <code>grunt jshint</code>. The options for
+JSHint are stored in a <code>.jshintrc</code> file; many repositories will have multiple
+<code>.jshintrc</code> files based on the type of code in each directory.
+
+</p>
+<p>Each <code>.jshintrc</code> file follows a specific format. All options must be alphabetized
+and grouped:
+
+</p>
+<div class="syntaxhighlighter json nogutter">
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+          
+            <div class="line n1">1</div>
+          
+            <div class="line n2">2</div>
+          
+            <div class="line n3">3</div>
+          
+            <div class="line n4">4</div>
+          
+            <div class="line n5">5</div>
+          
+            <div class="line n6">6</div>
+          
+            <div class="line n7">7</div>
+          
+            <div class="line n8">8</div>
+          
+            <div class="line n9">9</div>
+          
+            <div class="line n10">10</div>
+          
+            <div class="line n11">11</div>
+          
+            <div class="line n12">12</div>
+          
+        </td>
+        <td class="code">
+          <pre><div class="container"><div class="line"><code>{</code></div></div><div class="container"><div class="line"><code>    "<span class="attribute">common1</span>": <span class="value"><span class="literal">true</span></span>,</code></div></div><div class="container"><div class="line"><code>    "<span class="attribute">common2</span>": <span class="value"><span class="literal">true</span></span>,</code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code>    "<span class="attribute">repoSpecific1</span>": <span class="value"><span class="literal">true</span></span>,</code></div></div><div class="container"><div class="line"><code>    "<span class="attribute">repoSpecific2</span>": <span class="value"><span class="literal">true</span></span>,</code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code>    "<span class="attribute">globals</span>": <span class="value">{</span></code></div></div><div class="container"><div class="line"><code>        "<span class="attribute">repoGlobal1</span>": <span class="value"><span class="literal">true</span></span>,</code></div></div><div class="container"><div class="line"><code>        "<span class="attribute">repoGlobal2</span>": <span class="value"><span class="literal">false</span></span></code></div></div><div class="container"><div class="line"><code>    }</code></div></div><div class="container"><div class="line"><code>}</code></div></div></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>The following common options must be used in all projects:
+
+</p>
+<div class="syntaxhighlighter json nogutter">
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+          
+            <div class="line n1">1</div>
+          
+            <div class="line n2">2</div>
+          
+            <div class="line n3">3</div>
+          
+            <div class="line n4">4</div>
+          
+            <div class="line n5">5</div>
+          
+            <div class="line n6">6</div>
+          
+            <div class="line n7">7</div>
+          
+            <div class="line n8">8</div>
+          
+            <div class="line n9">9</div>
+          
+            <div class="line n10">10</div>
+          
+            <div class="line n11">11</div>
+          
+            <div class="line n12">12</div>
+          
+            <div class="line n13">13</div>
+          
+            <div class="line n14">14</div>
+          
+            <div class="line n15">15</div>
+          
+        </td>
+        <td class="code">
+          <pre><div class="container"><div class="line"><code>{</code></div></div><div class="container"><div class="line"><code>    "<span class="attribute">boss</span>": <span class="value"><span class="literal">true</span></span>,</code></div></div><div class="container"><div class="line"><code>    "<span class="attribute">curly</span>": <span class="value"><span class="literal">true</span></span>,</code></div></div><div class="container"><div class="line"><code>    "<span class="attribute">eqeqeq</span>": <span class="value"><span class="literal">true</span></span>,</code></div></div><div class="container"><div class="line"><code>    "<span class="attribute">eqnull</span>": <span class="value"><span class="literal">true</span></span>,</code></div></div><div class="container"><div class="line"><code>    "<span class="attribute">expr</span>": <span class="value"><span class="literal">true</span></span>,</code></div></div><div class="container"><div class="line"><code>    "<span class="attribute">immed</span>": <span class="value"><span class="literal">true</span></span>,</code></div></div><div class="container"><div class="line"><code>    "<span class="attribute">noarg</span>": <span class="value"><span class="literal">true</span></span>,</code></div></div><div class="container"><div class="line"><code>    "<span class="attribute">onevar</span>": <span class="value"><span class="literal">true</span></span>,</code></div></div><div class="container"><div class="line"><code>    "<span class="attribute">quotmark</span>": <span class="value"><span class="string">"double"</span></span>,</code></div></div><div class="container"><div class="line"><code>    "<span class="attribute">smarttabs</span>": <span class="value"><span class="literal">true</span></span>,</code></div></div><div class="container"><div class="line"><code>    "<span class="attribute">trailing</span>": <span class="value"><span class="literal">true</span></span>,</code></div></div><div class="container"><div class="line"><code>    "<span class="attribute">undef</span>": <span class="value"><span class="literal">true</span></span>,</code></div></div><div class="container"><div class="line"><code>    "<span class="attribute">unused</span>": <span class="value"><span class="literal">true</span></span></code></div></div><div class="container"><div class="line"><code>}</code></div></div></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h2 class="toc-linked"><a href="#spacing" id="spacing" class="icon-link"><span class="visuallyhidden">link</span></a> Spacing</h2><p>In general, the jQuery style guide encourages liberal spacing for improved human readability. The minification process creates a file that is optimized for browsers to read and process.
+
+</p>
+<ul>
+<li>Indentation with tabs.</li>
+<li>No whitespace at the end of line or on blank lines.</li>
+<li>Lines should be no longer than 80 characters, and must not exceed 100 (counting tabs as 4 spaces).</li>
+<li><code>if</code>/<code>else</code>/<code>for</code>/<code>while</code>/<code>try</code> always have braces and always go on multiple lines.</li>
+<li>Unary special-character operators (e.g., <code>!</code>, <code>++</code>) must not have space next to their operand.</li>
+<li>Any <code>,</code> and <code>;</code> must not have preceding space.</li>
+<li>Any <code>;</code> used as a statement terminator must be at the end of the line.</li>
+<li>Any <code>:</code> after a property name in an object definition must not have preceding space.</li>
+<li>The <code>?</code> and <code>:</code> in a ternary conditional must have space on both sides.</li>
+<li>No filler spaces in empty constructs (e.g., <code>{}</code>, <code>[]</code>, <code>fn()</code>)</li>
+<li>New line at the end of each file.</li>
+<li>If the entire file is wrapped in a closure, the function body is not indented.</li>
+</ul>
+<h3 class="toc-linked"><a href="#bad-examples" id="bad-examples" class="icon-link"><span class="visuallyhidden">link</span></a> Bad Examples</h3><div class="syntaxhighlighter javascript nogutter">
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+          
+            <div class="line n1">1</div>
+          
+            <div class="line n2">2</div>
+          
+            <div class="line n3">3</div>
+          
+            <div class="line n4">4</div>
+          
+        </td>
+        <td class="code">
+          <pre><div class="container"><div class="line"><code><span class="comment">// Bad</span></code></div></div><div class="container"><div class="line"><code><span class="keyword">if</span>(condition) doSomething();</code></div></div><div class="container"><div class="line"><code><span class="keyword">while</span>(!condition) iterating++;</code></div></div><div class="container"><div class="line"><code><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="number">100</span>;i++) object[array[i]] = someFn(i);</code></div></div></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h3 class="toc-linked"><a href="#good-examples" id="good-examples" class="icon-link"><span class="visuallyhidden">link</span></a> Good Examples</h3><div class="syntaxhighlighter javascript nogutter">
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+          
+            <div class="line n1">1</div>
+          
+            <div class="line n2">2</div>
+          
+            <div class="line n3">3</div>
+          
+            <div class="line n4">4</div>
+          
+            <div class="line n5">5</div>
+          
+            <div class="line n6">6</div>
+          
+            <div class="line n7">7</div>
+          
+            <div class="line n8">8</div>
+          
+            <div class="line n9">9</div>
+          
+            <div class="line n10">10</div>
+          
+            <div class="line n11">11</div>
+          
+            <div class="line n12">12</div>
+          
+            <div class="line n13">13</div>
+          
+            <div class="line n14">14</div>
+          
+            <div class="line n15">15</div>
+          
+            <div class="line n16">16</div>
+          
+            <div class="line n17">17</div>
+          
+            <div class="line n18">18</div>
+          
+            <div class="line n19">19</div>
+          
+            <div class="line n20">20</div>
+          
+            <div class="line n21">21</div>
+          
+            <div class="line n22">22</div>
+          
+            <div class="line n23">23</div>
+          
+        </td>
+        <td class="code">
+          <pre><div class="container"><div class="line"><code><span class="keyword">var</span> i = <span class="number">0</span>;</code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="keyword">if</span> ( condition ) {</code></div></div><div class="container"><div class="line"><code>    doSomething();</code></div></div><div class="container"><div class="line"><code>} <span class="keyword">else</span> <span class="keyword">if</span> ( otherCondition ) {</code></div></div><div class="container"><div class="line"><code>    somethingElse();</code></div></div><div class="container"><div class="line"><code>} <span class="keyword">else</span> {</code></div></div><div class="container"><div class="line"><code>    otherThing();</code></div></div><div class="container"><div class="line"><code>}</code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="keyword">while</span> ( !condition ) {</code></div></div><div class="container"><div class="line"><code>    iterating++;</code></div></div><div class="container"><div class="line"><code>}</code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="keyword">for</span> ( ; i &lt; <span class="number">100</span>; i++ ) {</code></div></div><div class="container"><div class="line"><code>    object[ array[ i ] ] = someFn( i );</code></div></div><div class="container"><div class="line"><code>}</code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="keyword">try</span> {</code></div></div><div class="container"><div class="line"><code>    <span class="comment">// Expressions</span></code></div></div><div class="container"><div class="line"><code>} <span class="keyword">catch</span> ( e ) {</code></div></div><div class="container"><div class="line"><code>    <span class="comment">// Expressions</span></code></div></div><div class="container"><div class="line"><code>}</code></div></div></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h3 class="toc-linked"><a href="#objects" id="objects" class="icon-link"><span class="visuallyhidden">link</span></a> Objects</h3><p>Object declarations can be made on a single line if they are short (remember the line length limits). When an object declaration is too long to fit on one line, there must be one property per line. Property names only need to be quoted if they are reserved words or contain special characters:
+
+</p>
+<div class="syntaxhighlighter javascript nogutter">
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+          
+            <div class="line n1">1</div>
+          
+            <div class="line n2">2</div>
+          
+            <div class="line n3">3</div>
+          
+            <div class="line n4">4</div>
+          
+            <div class="line n5">5</div>
+          
+            <div class="line n6">6</div>
+          
+            <div class="line n7">7</div>
+          
+            <div class="line n8">8</div>
+          
+            <div class="line n9">9</div>
+          
+            <div class="line n10">10</div>
+          
+            <div class="line n11">11</div>
+          
+            <div class="line n12">12</div>
+          
+            <div class="line n13">13</div>
+          
+        </td>
+        <td class="code">
+          <pre><div class="container"><div class="line"><code><span class="comment">// Bad</span></code></div></div><div class="container"><div class="line"><code><span class="keyword">var</span> map = { ready: <span class="number">9</span>,</code></div></div><div class="container"><div class="line"><code>    when: <span class="number">4</span>, <span class="string">"you are"</span>: <span class="number">15</span> };</code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="comment">// Good</span></code></div></div><div class="container"><div class="line"><code><span class="keyword">var</span> map = { ready: <span class="number">9</span>, when: <span class="number">4</span>, <span class="string">"you are"</span>: <span class="number">15</span> };</code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="comment">// Good as well</span></code></div></div><div class="container"><div class="line"><code><span class="keyword">var</span> map = {</code></div></div><div class="container"><div class="line"><code>    ready: <span class="number">9</span>,</code></div></div><div class="container"><div class="line"><code>    when: <span class="number">4</span>,</code></div></div><div class="container"><div class="line"><code>    <span class="string">"you are"</span>: <span class="number">15</span></code></div></div><div class="container"><div class="line"><code>};</code></div></div></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h3 class="toc-linked"><a href="#arrays-and-function-calls" id="arrays-and-function-calls" class="icon-link"><span class="visuallyhidden">link</span></a> Arrays and Function Calls</h3><p>Always include extra spaces around elements and arguments:
+
+</p>
+<div class="syntaxhighlighter javascript nogutter">
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+          
+            <div class="line n1">1</div>
+          
+            <div class="line n2">2</div>
+          
+            <div class="line n3">3</div>
+          
+            <div class="line n4">4</div>
+          
+            <div class="line n5">5</div>
+          
+            <div class="line n6">6</div>
+          
+            <div class="line n7">7</div>
+          
+            <div class="line n8">8</div>
+          
+            <div class="line n9">9</div>
+          
+            <div class="line n10">10</div>
+          
+            <div class="line n11">11</div>
+          
+        </td>
+        <td class="code">
+          <pre><div class="container"><div class="line"><code>array = [ <span class="string">"*"</span> ];</code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code>array = [ a, b ];</code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code>foo( arg );</code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code>foo( <span class="string">"string"</span>, object );</code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code>foo( options, object[ property ] );</code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code>foo( node, <span class="string">"property"</span>, <span class="number">2</span> );</code></div></div></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>Exceptions:
+
+</p>
+<div class="syntaxhighlighter javascript nogutter">
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+          
+            <div class="line n1">1</div>
+          
+            <div class="line n2">2</div>
+          
+            <div class="line n3">3</div>
+          
+            <div class="line n4">4</div>
+          
+            <div class="line n5">5</div>
+          
+            <div class="line n6">6</div>
+          
+            <div class="line n7">7</div>
+          
+            <div class="line n8">8</div>
+          
+            <div class="line n9">9</div>
+          
+            <div class="line n10">10</div>
+          
+            <div class="line n11">11</div>
+          
+            <div class="line n12">12</div>
+          
+            <div class="line n13">13</div>
+          
+            <div class="line n14">14</div>
+          
+            <div class="line n15">15</div>
+          
+            <div class="line n16">16</div>
+          
+            <div class="line n17">17</div>
+          
+            <div class="line n18">18</div>
+          
+        </td>
+        <td class="code">
+          <pre><div class="container"><div class="line"><code><span class="comment">// Function with a callback, object, or array as the sole argument:</span></code></div></div><div class="container"><div class="line"><code><span class="comment">// No space on either side of the argument</span></code></div></div><div class="container"><div class="line"><code>foo({</code></div></div><div class="container"><div class="line"><code>    a: <span class="string">"alpha"</span>,</code></div></div><div class="container"><div class="line"><code>    b: <span class="string">"beta"</span></code></div></div><div class="container"><div class="line"><code>});</code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="comment">// Function with a callback, object, or array as the first argument:</span></code></div></div><div class="container"><div class="line"><code><span class="comment">// No space before the first argument</span></code></div></div><div class="container"><div class="line"><code>foo(<span class="keyword">function</span>() {</code></div></div><div class="container"><div class="line"><code>    <span class="comment">// Do stuff</span></code></div></div><div class="container"><div class="line"><code>}, options );</code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="comment">// Function with a callback, object, or array as the last argument:</span></code></div></div><div class="container"><div class="line"><code><span class="comment">// No space after after the last argument</span></code></div></div><div class="container"><div class="line"><code>foo( data, <span class="keyword">function</span>() {</code></div></div><div class="container"><div class="line"><code>    <span class="comment">// Do stuff</span></code></div></div><div class="container"><div class="line"><code>});</code></div></div></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h3 class="toc-linked"><a href="#multi-line-statements" id="multi-line-statements" class="icon-link"><span class="visuallyhidden">link</span></a> Multi-line Statements</h3><p>When a statement is too long to fit on one line, line breaks must occur after an operator.
+
+</p>
+<div class="syntaxhighlighter javascript nogutter">
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+          
+            <div class="line n1">1</div>
+          
+            <div class="line n2">2</div>
+          
+            <div class="line n3">3</div>
+          
+            <div class="line n4">4</div>
+          
+            <div class="line n5">5</div>
+          
+            <div class="line n6">6</div>
+          
+            <div class="line n7">7</div>
+          
+        </td>
+        <td class="code">
+          <pre><div class="container"><div class="line"><code><span class="comment">// Bad</span></code></div></div><div class="container"><div class="line"><code><span class="keyword">var</span> html = <span class="string">"&lt;p&gt;The sum of "</span> + a + <span class="string">" and "</span> + b + <span class="string">" plus "</span> + c</code></div></div><div class="container"><div class="line"><code>    + <span class="string">" is "</span> + (a + b + c);</code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="comment">// Good</span></code></div></div><div class="container"><div class="line"><code><span class="keyword">var</span> html = <span class="string">"&lt;p&gt;The sum of "</span> + a + <span class="string">" and "</span> + b + <span class="string">" plus "</span> + c +</code></div></div><div class="container"><div class="line"><code>    <span class="string">" is "</span> + (a + b + c);</code></div></div></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>Lines should be broken into logical groups if it improves readability, such as splitting each expression of a ternary operator onto its own line even if both will fit on a single line.
+
+</p>
+<div class="syntaxhighlighter javascript nogutter">
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+          
+            <div class="line n1">1</div>
+          
+            <div class="line n2">2</div>
+          
+            <div class="line n3">3</div>
+          
+        </td>
+        <td class="code">
+          <pre><div class="container"><div class="line"><code><span class="keyword">var</span> firstCondition( foo ) &amp;&amp; secondCondition( bar ) ?</code></div></div><div class="container"><div class="line"><code>    doStuff( foo, bar ) :</code></div></div><div class="container"><div class="line"><code>    doOtherStuff( foo, bar );</code></div></div></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>When a conditional is too long to fit on one line, successive lines must be indented one extra level to distinguish them from the body.
+
+</p>
+<div class="syntaxhighlighter javascript nogutter">
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+          
+            <div class="line n1">1</div>
+          
+            <div class="line n2">2</div>
+          
+            <div class="line n3">3</div>
+          
+            <div class="line n4">4</div>
+          
+        </td>
+        <td class="code">
+          <pre><div class="container"><div class="line"><code>    <span class="keyword">if</span> ( fistCondition() &amp;&amp; secondCondition() &amp;&amp;</code></div></div><div class="container"><div class="line"><code>            thirdCondition() ) {</code></div></div><div class="container"><div class="line"><code>        doStuff();</code></div></div><div class="container"><div class="line"><code>    }</code></div></div></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h3 class="toc-linked"><a href="#chained-method-calls" id="chained-method-calls" class="icon-link"><span class="visuallyhidden">link</span></a> Chained Method Calls</h3><p>When a chain of method calls is too long to fit on one line, there must be one call per line, with the first call on a separate line from the object the methods are called on. If the method changes the context, an extra level of indentation must be used.
+
+</p>
+<div class="syntaxhighlighter javascript nogutter">
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+          
+            <div class="line n1">1</div>
+          
+            <div class="line n2">2</div>
+          
+            <div class="line n3">3</div>
+          
+            <div class="line n4">4</div>
+          
+            <div class="line n5">5</div>
+          
+            <div class="line n6">6</div>
+          
+        </td>
+        <td class="code">
+          <pre><div class="container"><div class="line"><code>elements</code></div></div><div class="container"><div class="line"><code>    .addClass( <span class="string">"foo"</span> )</code></div></div><div class="container"><div class="line"><code>    .children()</code></div></div><div class="container"><div class="line"><code>        .html( <span class="string">"hello"</span> )</code></div></div><div class="container"><div class="line"><code>    .end()</code></div></div><div class="container"><div class="line"><code>    .appendTo( <span class="string">"body"</span> );</code></div></div></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h2 class="toc-linked"><a href="#assignments" id="assignments" class="icon-link"><span class="visuallyhidden">link</span></a> Assignments</h2><p>Assignments in a declaration must be on their own line. Declarations that don&#39;t have an assignment must be listed together at the start of the declaration. For example:
+
+</p>
+<div class="syntaxhighlighter javascript nogutter">
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+          
+            <div class="line n1">1</div>
+          
+            <div class="line n2">2</div>
+          
+            <div class="line n3">3</div>
+          
+            <div class="line n4">4</div>
+          
+            <div class="line n5">5</div>
+          
+            <div class="line n6">6</div>
+          
+            <div class="line n7">7</div>
+          
+            <div class="line n8">8</div>
+          
+            <div class="line n9">9</div>
+          
+            <div class="line n10">10</div>
+          
+            <div class="line n11">11</div>
+          
+        </td>
+        <td class="code">
+          <pre><div class="container"><div class="line"><code><span class="comment">// Bad</span></code></div></div><div class="container"><div class="line"><code><span class="keyword">var</span> foo = <span class="literal">true</span>;</code></div></div><div class="container"><div class="line"><code><span class="keyword">var</span> bar = <span class="literal">false</span>;</code></div></div><div class="container"><div class="line"><code><span class="keyword">var</span> a;</code></div></div><div class="container"><div class="line"><code><span class="keyword">var</span> b;</code></div></div><div class="container"><div class="line"><code><span class="keyword">var</span> c;</code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="comment">// Good</span></code></div></div><div class="container"><div class="line"><code><span class="keyword">var</span> a, b, c,</code></div></div><div class="container"><div class="line"><code>    foo = <span class="literal">true</span>,</code></div></div><div class="container"><div class="line"><code>    bar = <span class="literal">false</span>;</code></div></div></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h2 class="toc-linked"><a href="#equality" id="equality" class="icon-link"><span class="visuallyhidden">link</span></a> Equality</h2><p>Strict equality checks (<code>===</code>) must be used in favor of abstract equality checks (<code>==</code>). The <em>only</em> exception is when checking for <code>undefined</code> and <code>null</code> by way of <code>null</code>.
+
+</p>
+<div class="syntaxhighlighter javascript nogutter">
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+          
+            <div class="line n1">1</div>
+          
+            <div class="line n2">2</div>
+          
+        </td>
+        <td class="code">
+          <pre><div class="container"><div class="line"><code><span class="comment">// Check for both undefined and null values, for some important reason.</span></code></div></div><div class="container"><div class="line"><code>undefOrNull == <span class="literal">null</span>;</code></div></div></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h2 class="toc-linked"><a href="#type-checks" id="type-checks" class="icon-link"><span class="visuallyhidden">link</span></a> Type Checks</h2><ul>
+<li>String: <code>typeof object === &quot;string&quot;</code></li>
+<li>Number: <code>typeof object === &quot;number&quot;</code></li>
+<li>Boolean: <code>typeof object === &quot;boolean&quot;</code></li>
+<li>Object: <code>typeof object === &quot;object&quot;</code></li>
+<li>Plain Object: <code>jQuery.isPlainObject( object )</code></li>
+<li>Function: <code>jQuery.isFunction( object )</code></li>
+<li>Array: <code>jQuery.isArray( object )</code></li>
+<li>Element: <code>object.nodeType</code></li>
+<li>null: <code>object === null</code></li>
+<li>null or undefined: <code>object == null</code></li>
+<li>undefined:<ul>
+<li>Global Variables: <code>typeof variable === &quot;undefined&quot;</code></li>
+<li>Local Variables: <code>variable === undefined</code></li>
+<li>Properties: <code>object.prop === undefined</code></li>
+</ul>
+</li>
+</ul>
+<h2 class="toc-linked"><a href="#comments" id="comments" class="icon-link"><span class="visuallyhidden">link</span></a> Comments</h2><p>Comments are always preceded by a blank line. Comments start with a capital first letter, but don&#39;t require a period at the end, unless you&#39;re writing full sentences. There must be a single space between the comment token and the comment text; for multi-line comments a new line may be used in place of a space.
+
+</p>
+<p>Single line comments go <strong>over</strong> the line they refer to:
+
+</p>
+<div class="syntaxhighlighter javascript nogutter">
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+          
+            <div class="line n1">1</div>
+          
+            <div class="line n2">2</div>
+          
+        </td>
+        <td class="code">
+          <pre><div class="container"><div class="line"><code><span class="comment">// We need an explicit "bar", because later in the code foo is checked.</span></code></div></div><div class="container"><div class="line"><code><span class="keyword">var</span> foo = <span class="string">"bar"</span>;</code></div></div></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>Mulit-line comments may be used for long comments:
+
+</p>
+<div class="syntaxhighlighter javascript nogutter">
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+          
+            <div class="line n1">1</div>
+          
+            <div class="line n2">2</div>
+          
+            <div class="line n3">3</div>
+          
+        </td>
+        <td class="code">
+          <pre><div class="container"><div class="line"><code><span class="comment">/*</span></code></div></div><div class="container"><div class="line"><code><span class="comment">Four score and seven—pause—minutes ago...</span></code></div></div><div class="container"><div class="line"><code><span class="comment">*/</span></code></div></div></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>Inline comments are allowed as an exception when used to annotate special arguments in formal parameter lists:
+
+</p>
+<div class="syntaxhighlighter javascript nogutter">
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+          
+            <div class="line n1">1</div>
+          
+            <div class="line n2">2</div>
+          
+            <div class="line n3">3</div>
+          
+        </td>
+        <td class="code">
+          <pre><div class="container"><div class="line"><code><span class="function"><span class="keyword">function</span> <span class="title">foo</span><span class="params">( types, selector, data, fn, <span class="comment">/* INTERNAL */</span> one )</span> {</span></code></div></div><div class="container"><div class="line"><code>    <span class="comment">// Do stuff</span></code></div></div><div class="container"><div class="line"><code>}</code></div></div></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>Do not write API documentation in comments. API documentation lives in its own repository.
+
+</p>
+<h2 class="toc-linked"><a href="#quotes" id="quotes" class="icon-link"><span class="visuallyhidden">link</span></a> Quotes</h2><p>jQuery uses double quotes.
+
+</p>
+<div class="syntaxhighlighter javascript nogutter">
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+          
+            <div class="line n1">1</div>
+          
+        </td>
+        <td class="code">
+          <pre><div class="container"><div class="line"><code><span class="keyword">var</span> double = <span class="string">"I am wrapped in double quotes"</span>;</code></div></div></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>Strings that require inner quoting must use double outside and single inside.
+
+</p>
+<div class="syntaxhighlighter javascript nogutter">
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+          
+            <div class="line n1">1</div>
+          
+        </td>
+        <td class="code">
+          <pre><div class="container"><div class="line"><code><span class="keyword">var</span> html = <span class="string">"&lt;div id='my-id'&gt;&lt;/div&gt;"</span>;</code></div></div></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h2 class="toc-linked"><a href="#semicolons" id="semicolons" class="icon-link"><span class="visuallyhidden">link</span></a> Semicolons</h2><p>Use them. Never rely on ASI.
+
+</p>
+<h2 class="toc-linked"><a href="#naming-conventions" id="naming-conventions" class="icon-link"><span class="visuallyhidden">link</span></a> Naming Conventions</h2><p>Variable and function names should be full words, using camel case with a lowercase first letter. Names should be descriptive but not excessively so. Exceptions are allowed for iterators, such as the use of <code>i</code> to represent the index in a loop. Constructors do not need a capital first letter.
+
+</p>
+<h2 class="toc-linked"><a href="#global-variables" id="global-variables" class="icon-link"><span class="visuallyhidden">link</span></a> Global Variables</h2><p>Each project may expose at most one global variable.
+
+</p>
+<h2 class="toc-linked"><a href="#dom-node-rules" id="dom-node-rules" class="icon-link"><span class="visuallyhidden">link</span></a> DOM Node Rules</h2><p><code>.nodeName</code> must always be used in favor of <code>.tagName</code>.
+
+</p>
+<p><code>.nodeType</code> must be used to determine the classification of a node (not <code>.nodeName</code>).
+
+</p>
+<h2 class="toc-linked"><a href="#switch-statements" id="switch-statements" class="icon-link"><span class="visuallyhidden">link</span></a> Switch Statements</h2><p>The usage of <code>switch</code> statements is generally discouraged, but can be useful when there are a large number of cases - especially when multiple cases can be handled by the same block, or fall-through logic (the <code>default</code> case) can be leveraged.
+
+</p>
+<p>When using <code>switch</code> statements:
+
+</p>
+<ul>
+<li>Use a <code>break</code> for each case other than <code>default</code>.</li>
+<li>Align <code>case</code> statements with the <code>switch</code>.</li>
+</ul>
+<div class="syntaxhighlighter javascript nogutter">
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+          
+            <div class="line n1">1</div>
+          
+            <div class="line n2">2</div>
+          
+            <div class="line n3">3</div>
+          
+            <div class="line n4">4</div>
+          
+            <div class="line n5">5</div>
+          
+            <div class="line n6">6</div>
+          
+            <div class="line n7">7</div>
+          
+            <div class="line n8">8</div>
+          
+            <div class="line n9">9</div>
+          
+            <div class="line n10">10</div>
+          
+            <div class="line n11">11</div>
+          
+        </td>
+        <td class="code">
+          <pre><div class="container"><div class="line"><code><span class="keyword">switch</span> ( event.keyCode ) {</code></div></div><div class="container"><div class="line"><code><span class="keyword">case</span> $.ui.keyCode.ENTER:</code></div></div><div class="container"><div class="line"><code><span class="keyword">case</span> $.ui.keyCode.SPACE:</code></div></div><div class="container"><div class="line"><code>    x();</code></div></div><div class="container"><div class="line"><code>    <span class="keyword">break</span>;</code></div></div><div class="container"><div class="line"><code><span class="keyword">case</span> $.ui.keyCode.ESCAPE:</code></div></div><div class="container"><div class="line"><code>    y();</code></div></div><div class="container"><div class="line"><code>    <span class="keyword">break</span>;</code></div></div><div class="container"><div class="line"><code><span class="keyword">default</span>:</code></div></div><div class="container"><div class="line"><code>    z();</code></div></div><div class="container"><div class="line"><code>}</code></div></div></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>  </div>
+
+
+
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Footer
+    ================================================== -->
+    <footer class="bs-footer" role="contentinfo">
+      <div class="container">
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/holder.js"></script>
+    <script src="js/application.js"></script>
+  </body>
+</html>

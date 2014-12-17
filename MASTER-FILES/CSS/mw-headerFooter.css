@@ -1,0 +1,507 @@
+/* General */
+
+html, body {
+	background-color: #FFF;
+	font-family: sans-serif;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	height: 100%;
+}
+
+body {
+	width: 320px;	
+	margin: 0 auto;
+	color: #333;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 14px; 
+}
+
+header#hd-3p *,
+footer#hd-3p * {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	/*font-size: 14px;*/
+}
+header#hd-3p .bold,
+footer#hd-3p .bold {
+	font-weight: bold;
+}
+header#hd-3p .norm, .N,
+footer#hd-3p .norm, .N {
+	font-weight: normal;
+}
+header#hd-3p .small,
+footer#hd-3p .small {
+	font-size: 12px;
+}
+header#hd-3p .standard,
+footer#hd-3p .standard {
+	font-size: 14px !important;
+}
+header#hd-3p .txtColor4,
+footer#hd-3p .txtColor4  {
+	color: #666666 !important;
+}
+
+header#hd-3p {
+	overflow: hidden;
+}
+
+header#hd-3p ul, 
+header#hd-3p ol,
+footer#hd-3p ul, 
+footer#hd-3p ol {
+	list-style: none;
+}
+
+header#hd-3p a,
+footer#hd-3p a {
+	color: #333;
+	text-decoration: none;
+}
+
+header#hd-3p a img,
+footer#hd-3p a img {
+	border: none;
+} 
+
+header#hd-3p .fLeft,
+footer#hd-3p .fLeft {
+	float: left;
+}
+
+header#hd-3p .fRight,
+footer#hd-3p .fRight {
+	float: right;
+}
+
+header#hd-3p .clearFix,
+footer#hd-3p .clearFix {
+	height: 1%;
+	overflow:hidden;
+}
+
+/* Sprites */
+
+header#hd-3p .icon,
+header#hd-3p .cart,
+header#hd-3p .account,
+header#hd-3p .location,
+footer#hd-3p .carrot,
+header#hd-3p .carrot,
+footer#hd-3p .icon,
+footer#hd-3p .arrow,
+header#hd-3p .arrow,
+footer#hd-3p .head,
+header#hd-3p .carrots a,
+header#hd-3p .carrot a {
+	background-image: url('../images/Mobile_Sprite.png');
+	background-size: 94px 645px;
+	background-repeat: no-repeat;
+}
+
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+	only screen and (-moz-min-device-pixel-ratio: 1.5),
+	only screen and (-o-min-device-pixel-ratio: 3/2),
+	only screen and (min-device-pixel-ratio: 1.5)  {
+header#hd-3p .icon,
+header#hd-3p .cart,
+header#hd-3p .account,
+header#hd-3p .location,
+footer#hd-3p .carrot,
+header#hd-3p .carrot,
+footer#hd-3p .icon,
+footer#hd-3p .arrow,
+header#hd-3p .arrow,
+footer#hd-3p .head,
+header#hd-3p .carrots a,
+header#hd-3p .carrot a {
+	background-image: url('../images/Mobile_Sprite_@2X.png');
+	background-size: 94px 645px;
+	background-repeat: no-repeat;
+}
+}
+
+header#hd-3p .cart,
+header#hd-3p .cart .icon {
+	background-position: -30px -61px;
+}
+
+header#hd-3p .account,
+header#hd-3p .account .icon {
+	background-position: -30px -88px;
+}
+
+header#hd-3p .location,
+header#hd-3p .location .icon,
+header#hd-3p .location.icon {
+	background-position: -30px -118px;
+}
+
+header#hd-3p .btn .location.icon {
+	height: 30px;
+	width: 30px;
+	margin:-10px;
+}
+
+/* Buttons */
+header#hd-3p .btn {
+	cursor: pointer;
+	display: inline-block;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 10px;
+	text-decoration: none;
+	text-transform: uppercase;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	zoom: 1;
+	/*Base Appearance drkGry */
+	background: #646464;
+	border: 1px solid  #646464;
+	color: #FFFFFF;
+}
+
+header#hd-3p .btn span {
+	display:inline-block;
+	width: 10px;
+	height: 14px;
+	vertical-align: middle;
+}
+
+
+/* Header */
+header#hd-3p #THD_logo {
+	position: relative;
+	display: block;
+	height: 61px;
+	width: 62px;
+	margin-left: 10px;
+	background-color: #FFF;			
+	background-position: 0 0;
+	-moz-box-shadow: 0px 0px 5px 0px #999;
+	-webkit-box-shadow: 0px 0px 5px 0px #999;
+	box-shadow: 0px 0px 5px 0px #999;
+	text-decoration: none;
+	z-index: 1000;
+}
+
+header#hd-3p nav ul {
+	display:block;
+	height: 55px;
+	margin-top: -61px;
+	-moz-box-shadow: 0px 0px 5px 0px #999;
+	-webkit-box-shadow: 0px 0px 5px 0px #999;
+	box-shadow: 0px 0px 5px 0px #999;
+	background-color: #F9F8F4;
+}
+
+header#hd-3p nav li a {
+	display: inline-block;
+	float: right;
+	margin-top: 10px;
+	width: 78px;
+	text-align: center;
+	border-right: 1px solid #CCC;
+	text-decoration: none;
+	color: #999;
+	font-size: 10px;
+}
+
+header#hd-3p nav li:first-child a {
+	border-right: 1px solid #FFF;
+}
+
+header#hd-3p nav .icon {
+	height:28px;
+	width:30px;
+	margin:0 auto;
+	clear: both;
+}
+
+header#hd-3p #cartQty {
+	position: absolute;
+	z-index:999;
+	text-align:center;
+	width:80px;
+	/*margin: -3px 0 0 -6px;*/
+}
+
+header#hd-3p #cartQty span {
+	background-color: #F96302;
+	color: #FFFFFF;
+	font-size: 10px;
+	font-weight: bold;
+	padding: 1px 2px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	border: 2px solid #FFFFFF;
+	margin-left:6px;
+}
+
+header#hd-3p #Shop_All {
+	display: inline-block;
+	margin: 15px 0 0 10px;
+  	background-color: #666;
+  	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+
+header#hd-3p #Shop_All .icon {
+	display: inline-block;
+	height: 14px;
+  	width: 14px;
+  	margin-right: 10px;
+  	background-position: -70px -248px;
+}
+header#hd-3p #Shop_All.open .icon {
+	background-position: -70px -278px;
+}
+
+header#hd-3p input[type=text] {
+	height: 36px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	border:1px solid #CCC;
+	padding-left:10px;
+	vertical-align:middle;
+	font-size: 12px;
+}
+
+header#hd-3p input[type=submit] {
+	height: 34px;
+	width: 34px;
+	border:none;
+	margin-top:-30px;
+	margin-left: -30px;
+	background-color: transparent;
+	background-position: -65px -537px;
+	cursor: pointer;			
+}
+
+header#hd-3p input.searchAll {
+	width: 170px;
+	margin-left:5px;
+}
+
+/* Footer */
+footer#hd-3p {
+	padding: 10px 0 20px 0;
+}
+
+footer#hd-3p ul#floor {
+	text-align: center;
+}
+
+footer#hd-3p ul#floor li {
+	display: inline-block;
+	width: 20%;
+	height: 12px;
+	border-right: 1px solid #999;
+	margin-left: -5px;
+}
+
+footer#hd-3p ul#floor li:last-child {
+	border-right: none;
+}
+
+footer#hd-3p ul#floor li a {
+	display: block;
+	color: #666666;
+	width: 100%;
+	height: 12px;
+	font-size: 12px;
+	vertical-align: text-top;
+	text-decoration: none;
+}
+
+footer#hd-3p .large {
+	font-size: 16px;
+}
+
+/* Button List */
+footer#hd-3p .btns,
+header#hd-3p .btns {
+	font-size:18px;
+}
+footer#hd-3p .btns>li,
+header#hd-3p .btns>li {
+	min-height:40px;
+	border: none;
+	background: none;
+	padding: 0;
+}
+footer#hd-3p .btns .icon,
+header#hd-3p .btns .icon {
+	display:inline-block;
+	height:30px;
+	width:30px;
+	vertical-align: middle;
+	margin-right: 10px;
+}
+
+footer#hd-3p .btns>li>a:first-child,
+footer#hd-3p .btns>li>div:first-child,
+footer#hd-3p div.btns,
+header#hd-3p .btns>li>a:first-child,
+header#hd-3p .btns>li>div:first-child,
+header#hd-3p div.btns {
+	cursor: pointer;
+	display: table-cell;
+	width: 320px;
+	height: 40px;
+	vertical-align: middle;
+	padding:0 10px;
+}
+
+/*:not(:last-child) */
+footer#hd-3p section .white>li:not(:last-child),
+footer#hd-3p .white>li,
+footer#hd-3p li.white,
+footer#hd-3p li.white_btn {
+	border-bottom: 1px solid #CCCCCC;
+}
+
+footer#hd-3p .white>li:first-child {
+	border-top: 1px solid #CCCCCC;
+}
+
+footer#hd-3p .white .white li:last-child {
+	border-bottom: none;
+} 
+
+
+
+footer#hd-3p .white>a,
+footer#hd-3p .white>div,
+footer#hd-3p .white_btn>a {
+	background-color: #FFFFFF;
+}
+footer#hd-3p .white>li:not(:last-child),
+footer#hd-3p .white>li,
+footer#hd-3p li.white,
+footer#hd-3p li.white_btn,
+header#hd-3p li.white_btn {
+	border-bottom: 1px solid #CCCCCC;
+}
+footer#hd-3p .ltGrey>a,
+footer#hd-3p .ltGrey>div:first-child,
+footer#hd-3p .ltGrey>li>a,
+footer#hd-3p .ltGrey>li>div:first-child  {
+	background-color: #CCCCCC;
+}
+footer#hd-3p .ltGrey>li,
+footer#hd-3p li.ltGrey {
+	border-bottom: 1px solid #FFFFFF;
+}
+footer#hd-3p .ltGrey>li:first-child {
+	border-top: 1px solid #FFFFFF;
+}
+footer#hd-3p .carrot,
+header#hd-3p .carrot { 
+	background-position:right -295px; 
+	padding-right: 20px;
+}
+footer#hd-3p .plus,
+footer#hd-3p .head {
+	background-position: right -414px;
+	padding-right: 10px;
+}
+footer#hd-3p .head.open {
+	background-position: right -355px;
+}
+footer#hd-3p .arrow { 
+	background-position: right -480px;  
+	padding-right: 30px;
+}
+footer#hd-3p .carrot { 
+	background-position:right -295px; 
+	padding-right: 20px;
+} 
+footer#hd-3p .lite,
+footer#hd-3p .lite a {
+	color: #999999;
+}
+footer#hd-3p .pad-top {
+	margin-top: 10px;
+}
+
+header#hd-3p li.orange > a,
+header#hd-3p li.orange > div,
+header#hd-3p li.orangeSolid_btn > a {
+	color: #FFFFFF;
+	background-color: #EE9129;
+}
+header#hd-3p .orange.carrots a,
+header#hd-3p .carrots li.orange a,
+header#hd-3p .orange li.carrot a,
+header#hd-3p .orange.carrot a,
+header#hd-3p .orangeSolid_btn.carrot a {
+	background-position:right -295px;  
+}
+
+header#hd-3p .carrots a,
+header#hd-3p li.carrot a {
+	background-position:right -295px;  
+}
+
+header#hd-3p .btns a.carrot {
+	background-position:right -300px;  
+}
+header#hd-3p .orange>li,
+header#hd-3p li.orange,
+header#hd-3p li.orangeSolid_btn  {
+	border-bottom: 1px solid #FFFFFF;	
+}
+
+
+/* Overrides */
+footer#hd-3p .hide,
+header#hd-3p .hide {
+	display: none;
+}
+
+
+/* Shop All Drop Down and Btns */
+header#hd-3p #shopAllList {
+	position: absolute;
+	width: 320px;
+	z-index: 500;
+	margin-top: -4px !important;
+	display: none;
+}
+header#hd-3p #shopAllList .tongue {
+	height: 13px;
+	padding: 0;
+	margin: 0 0 0 10px;
+	background-color: #646464;
+}
+header#hd-3p #shopAllList .btns {
+	width: 300px;
+	margin: 0 10px;
+}
+header#hd-3p #shopAllList li a {
+	-webkit-tap-highlight-color: rgba(249,99,2,0.3);
+	background-color: #666666;
+	color: #fff;
+	border-bottom: solid 1px #666666;
+}
+header#hd-3p #shopAllList li a:active { background-color: #F96302; }
+header#hd-3p #shopAllList li.drkGray_btn a, 
+header#hd-3p #shopAllList li.orangeSolid_btn a { background-color: #333; }
+header#hd-3p #shopAllList li.thd_orange a { background-color: #F96302; }
+
+/* Seasonal Colors for btns */
+header#hd-3p #shopAllList li.holiday_btn a { background-color: #af1c35; }
+header#hd-3p #shopAllList li.specialBuy_btn a { background-color: #ED1C24; }
+header#hd-3p #shopAllList li.nlpGreen_btn a { background-color: #00AE4D; }
+header#hd-3p #shopAllList li.outdoorGarden_btn a { background-color: #acb335; }
+header#hd-3p #shopAllList li.goldenrod_btn a { background-color: #FFC20E; }
+header#hd-3p #shopAllList li.clearance_btn a { background-color: #FFFF00; }
+
+/* End shop all list */

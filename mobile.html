@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>HD Bootstrap | Mobile</title>
+    <!-- Bootstrapping theme CSS -->
+    <link href="css/bootstrap/bootstrap.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/bootstrap/theme.css" rel="stylesheet">    
+
+    <!-- MW/TW ASSETS -->
+    <link href="css/buttons.css" rel="stylesheet">
+    <link href="css/forms.css" rel="stylesheet">
+    <link href="css/icons.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">HD Bootstrap</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="css.html">CSS</a></li>
+            <li><a href="javascript.html">JS</a></li>
+            <li><a href="components.html">Components</a></li>
+            <li class="active"><a href="mobile.html">Mobile</a></li>
+            <li><a href="tablet.html">Tablet</a></li>
+            <!--<li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Nav header</li>
+                <li><a href="#">Separated link</a></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li>-->
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <!-- Docs page layout -->
+    <div class="bs-header" id="content">
+      <div class="container">
+        <h1>Mobile</h1>
+        <p>Here you will find info specific to Mobile.</p>
+      </div>
+    </div>
+
+
+    <div class="container bs-docs-container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="bs-sidebar hidden-print" role="complementary">
+            <ul class="nav bs-sidenav">
+                <li> <a href="#mw-anatomy">Anatomy</a></li>
+                <li><a href="#mw-header">Header</a>
+                        <ul class="nav">
+                          <li><a href="#mw-shopall">Shop All Flyout</a></li>
+                          <li><a href="#mw-search">Search</a></li>
+                          <li><a href="#mw-cart-quantity">Cart Quantity</a></li>
+                        </ul>
+                </li>
+                <li><a href="#mw-footer">Footer</a></li>       
+                <li> <a href="#mw-storefinder">Storefinder</a></li>
+                <li><a href="#mw-home">Home Page</a>
+                        <ul class="nav">
+                          <li><a href="#mw-banner">Banner</a></li>
+                          <li><a href="#mw-store-account">Store Location and Account</a></li>
+                        </ul>
+                </li>
+                <li> <a href="#mw-plp">PLP</a></li>  
+                <li> <a href="#mw-pip">PIP</a></li>  
+                <li> <a href="#mw-my-account">My Account</a></li> 
+                <li> <a href="#mw-cart">Cart &amp; Checkout</a></li>  
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-9" role="main">
+
+
+  <!-- Anatomy
+  ================================================== -->
+  <div class="bs-docs-section">
+    <div class="page-header">
+      <h1 id="mw-anatomy">Anatomy</h1>
+    </div>
+
+    <p>The mobile web site is made from stacked components. Each page gets the same header and footer. The mobile header includes: the HD logo, storefinder link/icon, account link/icon, and cart link/icon. Unlike the tablet experience which uses font glyphs, the mobile icons are located on the Mobile_Sprite.png.</p>
+
+    <h2>Objects</h2>
+    <h3>Module/Pod</h3>
+    <p>This module/pod is the building block of the site. The basic features of the module/pod include:</p>
+      <ul>
+          <li>1px solid #ccc border bottom</li>
+          <li>padding: 10px all around</li>
+          <li>white background</li>
+      </ul>
+    <p>If you need a top border for the module add the class, border-top.</p>
+    <p>Variations include:</p>
+      <ul>
+          <li>Background color</li>
+          <li>Border color</li>
+          <li>Font color</li>
+        </ul>
+    <p>The secondary module is light gray. The secondary module is used in the buy-box and in cart and checkout.</p>
+    <p>The tertiary module is dark gray with white border and white text. Tertiary is used on the videos pages.</p>
+
+    <h3>Primary list</h3>
+    <p>This list is used throughout the site. You can see it on the home page in the footer, and on the category pages.</p>
+    <p>The basic features of the list include:</p>
+      <ul>
+          <li>1px solid #ccc border bottom</li>
+          <li>font-size: 18px</li>
+          <li>carrot</li>
+      </ul>
+      <p>Variations include:</p>
+      <ul>
+          <li>Background color of li</li>
+          <li>Border color of li</li>
+          <li>Font weight</li>
+          <li>Font Color</li>
+        </ul>
+      <h3>Nav list</h3>
+    <p>This list is also used throughout the site. You can see it at the bottom of the footer and at the top of the category video pages.</p>
+    <p>The basic features of the list include:</p>
+      <ul>
+          <li>display: inline block</li>
+          <li>font-size: 12px</li>
+          <li>border-right: 1px solid #000</li>
+      </ul>
+      <p>Variations include:</p>
+      <ul>
+          <li>carrot</li>
+          <li>Border color of li</li>
+          <li>Font weight</li>
+          <li>Font Color</li>
+        </ul>
+    <h3>Tabs</h3>
+    <p>Tabs are used on the workshops page and PLP page. The active tab is white, other tabs are light gray.</p>
+    <h3>Sort By drop down</h3>
+    </div>
+
+
+  <!-- MW-HEADER
+  ================================================== -->
+  <div class="bs-docs-section">
+    <div class="page-header">
+      <h1 id="mw-header">Header</h1>
+    </div>
+      <h3>Shop All Flyout</h3>
+      <p>Aliquam vel orci ultricies, fermentum libero at, sodales metus. Duis non consequat nisl, eget cursus arcu.</p>
+      <h3>Search</h3>
+      <p>Search is complemented with the typeahead feature.</p>
+
+  <!-- MW-FOOTER
+  ================================================== -->
+  <div class="bs-docs-section">
+    <div class="page-header">
+      <h1 id="mw-footer">Footer</h1>
+      <p> The footer is made up of a primary list. This list is used throughout the site. Check the details in the section above.</p>
+      <p>The footer is also made up of a nav list.</p>
+    </div>
+
+      
+  </div>
+
+  <!-- MW-HOME
+  ================================================== -->
+    <div class="bs-docs-section">
+      <div class="page-header">
+        <h1 id="mw-home">Home page</h1>
+      </div> 
+      <h3>Banner</h3>
+      <p>There is a rotating banner that runs on the home page.</p>
+      <h3>Store Location and Account</h3>
+      
+    </div>
+
+   <!-- MW-PLP
+  ================================================== -->
+    <div class="bs-docs-section">
+      <div class="page-header">
+        <h1 id="mw-plp">PLP</h1>  
+      </div>
+      <p>The mobile PLP stacks products pods. Products are sortable by the sort by dropdown. The list can also be refined.</p>
+      <h3>Tabs</h3>
+      <p>Choose a tab to filter items shown to online or store only or all products.</p>
+      <h3>Sort By Dropdown</h3>
+      <p>Touch the Sort by dropdown and the tumbler appears.</p>
+      <h3>Refine button</h3>
+      <p>Touch the REFINE button and the refinements page is loaded like an overlay. The refinements are another variant of the primary list object.</p>
+      <h3>PLP Pod</h3>
+      <p>The PLP pod consists of an image, price, short description, ratings, ratings number.</p>
+      <p>The image is 100px x 100px</p>
+      <h3>PRP/IRG - related items</h3>
+      <p>Customer Ultimately purchased...<p>
+      <p>This is a swipable scroller. Each window contains 2 content pods with the same content as PLP pods, though arranged vertically and the image is 145px.</p>
+
+    </div>
+
+   <!-- MW-PIP
+  ================================================== -->
+    <div class="bs-docs-section">
+      <div class="page-header">
+        <h1 id="mw-pip">PIP</h1>
+      </div>
+      <h3>Image Slider/Swiper</h3>
+      <p>Each product with an associated image or images is displayed in a swipable and zoomable slider.<p>
+      <p>This is a swipable scroller. Each window contains 2 content pods with the same content as PLP pods, though arranged vertically and the image is 145px.</p>
+      <h3>Buy Box</h3>
+      <h3>Store Details</h3>
+      <p>Store Details is a horizontal nav list variant.</p>
+      <h3>Product Details</h3>
+      <p>The product details are: Description, Specifications, Shipping Options, and Reviews. These are all in a vertical accordion list variant and display different type of info using definition lists for descriptions and specifications and a p tag for the shipping options.</p>
+      <h3>Reviews</h3>
+      <p>The reviews are laid out in a primary vertical list with another list variant inside that doesn't show any borders but lists each item.</p>
+      <h3>PRP/IRG - related items</h3>
+      <p>Customer Ultimately purchased...<p>
+      <p>This is a swipable scroller. Each window contains 2 content pods with the same content as PLP pods, though arranged vertically and the image is 145px.</p>
+    </div>
+
+  <!-- MW-STOREFINDER
+  ================================================== -->
+    <div class="bs-docs-section">
+      <div class="page-header">
+        <h1 id="mw-storefinder">Storefinder</h1>
+      </div>
+      <p>Upon visiting the site, user will be prompted to allow GPS. This will set the nearest local store automatically. If user refuses, the default store - 121 - will be set.</p>
+      <h3>Landing Page</h3>
+      <p>User gets to this page from the STORES link/icon in header.</p>
+      <p>Touch, USE GPS  or enter Zip and user will be taken to page showing 20 nearest stores.</p>
+      <p>Touch Pin icon and larger map shows with pins. A list button shows to toggle between map/pin view and list view. Refine button opens the overlay.</p>
+      <p>Refine Overlay on Storefinder. User can choose with a drop down tumbler distance from current location or zip. also User can check services availalbe at store</p>
+      <p>
+    </div>
+
+  <!-- MW-MY ACCOUNT PAGE
+  ================================================== -->
+    <div class="bs-docs-section">
+      <div class="page-header">
+        <h1 id="mw-my-account">My Account</h1>
+      </div>
+
+    </div>
+
+   <!-- MW-CART
+  ================================================== -->
+    <div class="bs-docs-section">
+    <div class="page-header">
+      <h1 id="mw-cart">Cart &amp; Checkout</h1>   
+    </div>
+
+  </div>
+
+
+    </div>
+
+    <!-- Footer
+    ================================================== -->
+    <footer class="bs-footer" role="contentinfo">
+      <div class="container">
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/holder.js"></script>
+    <script src="js/application.js"></script>
+  </body>
+</html>

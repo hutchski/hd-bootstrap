@@ -1,0 +1,1884 @@
+/* ----------------------------------------------------------------------------
+	Purpose:
+	Global CSS Styles for the m.HomeDepot.com website
+	Last Updated: 5-29-2012 1:45pm 
+*/
+
+/*	----------------------------------------------------------------------------
+	Table Of Contents
+	1. Resets & Defaults
+		a. Resets
+		b. Defaults
+	2. Grid and Layout
+		a. Grid
+		b. Layout
+	3. Generics
+	4. Typography
+	5. Buttons
+*/
+
+/*	----------------------------------------------------------------------------
+	(1) Defaults & Resets */
+
+/*	----------------------------------------
+	(1a) Defaults & Resets - Resets */
+
+*, form {
+	margin: 0;
+	padding: 0;
+}
+
+a img {
+	border: none;
+}
+
+img {
+	-ms-interpolation-mode: bicubic;
+}
+
+/* Help IE resize /static/images if needed. */
+
+ul {
+	list-style-type: none;
+}
+
+ol {
+	list-style-type: decimal;
+	padding-left: 20px;
+}
+
+b, strong, b *, strong * {
+	font-weight: bold;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+	display: inline;
+}
+
+/*	----------------------------------------
+	(1b) Defaults & Resets - Defaults */
+
+html, body {
+	background: #FFF;
+}
+
+body {
+	color: #333;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 14px;
+}
+
+a {
+	color: #333;
+	text-decoration: none;
+}
+
+ul.type-footer a {
+	color: #333;
+	text-decoration: none;
+}
+
+.PadRight20 {
+	padding-right: 20px;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+/*	----------------------------------------------------------------------------
+	(2) Grid and Layout */
+
+/*	----------------------------------------
+	(2a) Grid and Layout - Grid */
+
+/* Main Container */
+
+.container_2 {
+	margin-left: auto;
+	margin-right: auto;
+	width: 320px;
+}
+
+/* POD Globals */
+
+/* Setting default border style/color here. */
+
+.row, .pod, .spad {
+	border: 0 solid #ddd;
+}
+
+.grid_1, .grid_2 , .grid_6, .grid_12 {
+	display: inline;
+	float: left;
+	position: relative;
+}
+
+/* POD Widths */
+
+.container_2 .grid_1, .container_2 .grid_12 {
+	width: 320px;
+}
+
+/* grid_1 & grid_12 are equivalent */
+
+.container_2 .grid_2, .container_2 .grid_6 {
+	width: 160px;
+}
+
+/* grid_2 & grid_6 are equivalent */
+
+/* standard Padding */
+
+.container_2 .spad {
+	padding: 10px;
+}
+
+#header .spad {
+	padding: 0 10px 10px 10px;
+}
+
+/* Spacing */
+
+.padTopReg {
+	padding-top: 10px;
+}
+
+.padTopTall {
+	padding-top: 12px;
+}
+
+/* Bulleted lists */
+
+ul.bulettedList {
+	list-style-type: none;
+	padding-top: 10px;
+}
+
+ul.bulettedList li {
+	background-color: transparent;
+	background-position: -109px -40px;
+	background-repeat: no-repeat;
+	background-image: url('/static/images/global-sprite.png');
+	list-style-type: none;
+	margin: 0;
+	padding-left: 10px;
+	padding-right: 0;
+	padding-top: 0px;
+}
+
+/* icons added to text */
+
+.arrow {
+	background: url('/static/images/global-sprite.png') right -263px no-repeat;
+	padding: 0 15px 0 0;
+}
+
+.plus {
+	background: url('/static/images/global-sprite.png') right -343px no-repeat;
+	padding: 0 15px 0 0;
+}
+
+/*	----------------------------------------
+	(2b) Grid and Layout - Layout */
+
+/* Border Control */
+
+.spad.alphaBorder {
+	border-right-width: 1px;
+	padding-right: 9px;
+}
+
+.spad.omegaBorder {
+	border-left-width: 1px;
+	padding-left: 9px;
+}
+
+/* add bottom border */
+
+.container_2 .withBorder {
+	border-bottom-width: 1px;
+}
+
+/* QC-18475 */
+
+/*	----------------------------------------------------------------------------
+	(3) Generics */
+
+.thdOrange {
+	color: #f96302 !important;
+}
+
+.b {
+	font-weight: bold;
+}
+
+.c {
+	text-align: center;
+}
+
+.r {
+	text-align: right;
+}
+
+.l {
+	text-align: left;
+}
+
+.j {
+	text-align: justify;
+}
+
+.hide {
+	visibility: hidden;
+	display: none !important;
+}
+
+.invisible {
+	visibility: hidden;
+}
+
+.clearfix:after {
+	clear: both;
+	content: " ";
+	display: block;
+	font-size: 0;
+	height: 0;
+	visibility: hidden;
+}
+
+.clearfix {
+	zoom: 1;
+}
+
+/* IE < 8 */
+
+.clear {
+	position: relative;
+	font-size: 0;
+	height: 0;
+	clear: both;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+}
+
+.hasLayoutFix {
+	zoom: 1\9;
+}
+
+/* All IEs */
+
+/* Floats */
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right !important;
+}
+
+.inline {
+	display: inline-block;
+}
+/*	----------------------------------------------------------------------------
+	(4) Typography */
+
+.title {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.large {
+	font-size: 18px;
+}
+
+.xlarge {
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.normal {
+	font-size: 14px;
+	line-height: 15px;
+}
+
+.small {
+	font-size: 12px;
+}
+
+.xsmall {
+	font-size: 10px;
+}
+
+.strikeThrough {
+	color: #999;
+	text-decoration: line-through;
+}
+
+ul.linkList li {
+	margin: 0 0 8px;
+}
+
+/* Title */
+
+h1.title, h1.title a {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+/*	----------------------------------------------------------------------------
+	(5) Buttons */
+
+.dynamic_btn {
+	cursor: pointer;
+	display: inline-block;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 10px 10px 10px 10px;
+	text-decoration: none;
+	text-transform: uppercase;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	zoom: 1;
+}
+
+.dynamic_btn.lowerCase {
+	text-transform: none;
+}
+
+.dynamic_btn span {
+	font-weight: bold;
+}
+
+.fullWidth_btn {     
+	cursor: pointer;
+    display: block;
+    font-size: 18px;
+    font-weight: normal;
+    padding: 10px 10px 9px;
+    zoom: 1;  
+}
+
+.fullWidth_btn a, .fullWidth_btn span {
+	vertical-align: middle;
+}
+
+.fullWidth_refinement_btn {
+	display: block;
+}
+
+.halfWidth_btn {   
+	cursor: pointer;
+    display: block;
+    font-size: 18px;
+    font-weight: normal;
+    padding: 10px 10px 9px;
+    text-decoration: none;
+    width: 130px;  
+}
+
+
+/* Grey */
+
+.grey_btn {
+	background: #DDD url('/static/images/btn-sprite-gry.png') repeat;
+	border: 1px solid  #ddd;
+	color: #000;
+	text-shadow: none;
+}
+
+.grey_btn:hover {
+	background: #DDD url('/static/images/btn-sprite-gry.png') repeat;
+	background-position: 0 -36px;
+	text-decoration: none;
+}
+
+.darkGrey_btn {
+	background: #DDD;
+	border: none;
+	margin-top: 1px;
+}
+
+#plp-sortList .darkGrey_btn {
+	background: #666;
+	border: none;
+	color: #FFF;
+}
+
+#plp-sortList .darkGrey_btn:first-child {
+	margin-top:0;
+}
+
+
+#plp-sortList .darkGrey_btn.active {
+	background: #fa6502;
+	color: #fff;
+	text-decoration: none;
+}
+
+/*
+.darkGrey_btn:hover {
+	background: #f96302;
+	color: #fff;
+	text-decoration: none;
+}
+*/
+
+.darkGrey_btn.active {
+	background: #fa6502;
+	color: #fff;
+	text-decoration: none;
+}
+
+.lightGrey_btn {
+	background: #eee;
+	border: none;
+	margin-top: 1px;
+}
+
+.lightGrey_btn:hover {
+	color: #f96302;
+	text-decoration: none;
+}
+
+/* White */
+
+.white_btn {
+	background: #fff;
+	border-top: 1px solid #ddd;
+	/
+
+* QC-18602 */
+	text-decoration: none;
+}
+
+/*
+ul>:first-child .white_btn {
+	border-top: 1px solid #ddd;
+}
+
+.white_btn:hover {
+	color: #f96302;
+	text-decoration: none;
+}
+*/
+
+/* Orange solid, no hover state QC-18471 */
+
+.orangeSolid_btn {
+	background: #f96302;
+	color: #fff;
+	border: none;
+	margin-top: 1px;
+}
+
+/* Orange gradient */
+
+.orange_btn {
+	background-image: url('/static/images/btn-sprite-org.png');
+	color: #fff;
+	text-shadow: none;
+}
+
+.orange_btn:hover {
+	background: url('/static/images/btn-sprite-org.png') repeat;
+	background-position: 0 -36px;
+	text-decoration: none;
+}
+
+.btn_disabled {
+	opacity: 0.5;
+	cursor: default;
+}
+
+/* Green */
+
+.green_btn {
+	background: #00ae4d;
+	color: #fff;
+	text-shadow: none;
+}
+
+.green_btn:hover {
+	background: #00ae4d;
+	text-decoration: none;
+}
+
+/* Button Icons */
+
+.dynamic_btn .carrot {
+	background: url('/static/images/global-sprite.png') no-repeat right -305px;
+	padding: 0 15px 0 0;
+}
+
+.dynamic_btn .plus {
+	background: url('/static/images/global-sprite.png') no-repeat right -341px;
+	padding: 0 15px 0 0;
+}
+
+.dynamic_btn.orange_btn .arrow {
+	background: url('/static/images/global-sprite.png') no-repeat right center;
+	padding: 0 15px 0 0;
+}
+
+.dynamic_btn.orange_btn .carrot {
+	background: url('/static/images/global-sprite.png') no-repeat right -301px;
+	padding: 0 15px 0 0;
+}
+
+.dynamic_btn.orange_btn .plus {
+	background: url('/static/images/global-sprite.png') no-repeat  -106px -104px;
+	padding: 0 0 0 15px;
+}
+
+.dynamic_btn.green_btn .check {
+	background: url('/static/images/global-sprite.png') no-repeat -98px -1px;
+	padding: 0 0 0 25px;
+}
+
+.fullWidth_btn .totalItems {
+	font-size: 12px;
+	padding: 0 0 0 10px;
+}
+
+.fullWidth_btn .carrot {
+	display: block;
+	background: url('/static/images/global-sprite.png') no-repeat right -301px;
+	padding: 0 15px 0 0;
+}
+
+.fullWidth_btn .plus {
+	display: block;
+	background: url('/static/images/global-sprite.png') no-repeat right -341px;
+	padding: 0 0 0 0;
+}                                                                                                                                               
+
+.fullWidth_btn.active .plus {
+	display: block;
+	background: url('/static/images/global-sprite.png') no-repeat right -141px;
+	padding: 0 0 0 0;
+}
+
+.fullWidth_btn .arrow {
+	background: url('/static/images/global-sprite.png') no-repeat right -259px;
+	padding: 0 20px 0 0;
+}
+
+.fullWidth_btn.orangeSolid_btn .arrow {
+	background: url('/static/images/global-sprite.png') no-repeat right center;
+	padding: 0 15px 0 0;
+}
+
+.fullWidth_btn.orangeSolid_btn .carrot {
+	display: block;
+	background: url('/static/images/global-sprite.png') no-repeat right -222px;
+	padding: 0 15px 0 0;
+}
+
+.fullWidth_btn.orangeSolid_btn .plus {
+	display: block;
+	background: url('/static/images/global-sprite.png') no-repeat right -101px;
+	padding: 0 0 0 0;
+}
+
+.fullWidth_refinement_btn .delete {
+	height: 25px;
+	display: block;
+	padding: 9px 0 0 42px;
+	background: url('/static/images/modules-sprite.png') no-repeat -117px -167px;
+}
+
+.fullWidth_refinement_btn .check {
+	height: 25px;
+	display: block;
+	padding: 9px 0 0 42px;
+	background: url('/static/images/modules-sprite.png') no-repeat -117px -99px;
+}
+
+.fullWidth_refinement_btn.active .check {
+	height: 25px;
+	display: block;
+	padding: 9px 0 0 42px;
+	background: url('/static/images/modules-sprite.png') no-repeat -117px -134px;
+}
+
+/*	----------------------------------------------------------------------------
+	(6) Form Elements */
+
+select {
+	position: relative;
+	top: -2px;
+	height: 25px;
+}
+
+/* currently used only on plp pages */
+
+/*	----------------------------------------------------------------------------
+	(6) Form Elements */
+
+/* Radio */
+
+input[type="radio"] {
+	cursor: pointer;
+	width: 33px;
+	height: 33px;
+	-webkit-appearance: none;
+	border: none;
+	background: url('/static/images/modules-sprite.png') no-repeat -117px -29px;
+	vertical-align: middle;
+}
+
+input[type="radio"]:hover,input[type="radio"]:checked {
+	background: url('/static/images/modules-sprite.png') no-repeat -117px -65px;
+}
+
+/* Checkbox */
+
+input[type="checkbox"] {
+	cursor: pointer;
+	width: 32px;
+	height: 32px;
+	-webkit-appearance: none;
+	border: none;
+	background: url('/static/images/modules-sprite.png') no-repeat -117px -100px;
+	vertical-align: middle;
+}
+
+input[type="checkbox"]:hover,input[type="checkbox"]:checked {
+	background: url('/static/images/modules-sprite.png') no-repeat -117px -134px;
+}
+
+/* Labels */
+
+label {
+	padding-left: 10px;
+}
+
+/*	----------------------------------------------------------------------------
+	(7) Ratings and Reviews */
+
+div.ratings {
+	float: left;
+	width: 110px;
+	height: 17px;
+	background: url('/static/images/stars-small.png') 0 -53px repeat-x;
+	margin-top:1px;
+}
+
+div.ratings .stars {
+	height: 17px;
+	background: url('/static/images/stars-small.png') 0 0 repeat-x;
+}
+
+div.ratingsNone .stars {
+	background: none;
+	text-align: center;
+	font-size: 14px;
+}
+
+/* Total */
+
+ul.ratings li.ratingTotal {
+	display: inline-block;
+	margin-left: 5px;
+}
+
+/*	----------------------------------------------------------------------------
+	(8) Error Handling */
+
+.errorText {
+	color: #ed1c24 !important;
+}
+
+.errorBorder {
+	border-color: #ed1c24 !important;
+}
+
+/*	----------------------------------------------------------------------------
+	(9) Header and Footer */
+
+/* header main  */
+
+.header {
+	position: relative;
+	width: 300px;
+	font-size: 11px;
+	line-height: 15px;
+	font-weight: bold;
+}
+
+/* height:110px; */
+
+.header a:link {
+	text-decoration: none;
+}
+
+.header a:visited {
+	text-decoration: none;
+}
+
+.header a:hover {
+	text-decoration: none;
+}
+
+.header a:active {
+	text-decoration: none;
+}
+
+/* header layout top nav */
+
+.headerTopNav {
+	padding-bottom: 10px;
+}
+
+.headerTopNav img {
+	float: left;
+	-moz-box-shadow: 0px 0px 5px 0px #999;
+	-webkit-box-shadow: 0px 0px 5px 0px #999;
+	box-shadow: 0px 0px 5px 0px #999;
+}
+
+ul.headerMenu {
+	float: right;
+	height: 30px;
+	padding: 17px 0px 0px 0px;
+}
+
+ul.headerMenu li {
+	float: left;
+	height: 22px;
+	border-right: 1px solid #999999;
+	padding: 8px 10px 0px 10px;
+}
+
+ul.headerMenu li:last-child {
+	float: left;
+	border-right: 0;
+	padding: 8px 0px 0px 10px;
+}
+
+ul.headerMenu .headerCartImg {
+	background: url('/static/images/global-sprite.png') -53px -2px no-repeat;
+	width: 14px;
+	height: 14px;
+	padding: 0px 14px 0px 0px;
+}
+
+ul.headerMenu .headerCartImg.items {
+	background: url('/static/images/global-sprite.png') -53px -25px no-repeat;
+	width: 14px;
+	height: 14px;
+	padding: 0px 14px 0px 0px;
+}
+
+ul.headerMenu .headerMyCart {
+	padding: 0px 0px 0px 5px;
+}
+
+/* header layout sub nav */
+
+.headerSubNav {
+	
+}
+
+/* header Shop All */
+
+.headerShopAll {
+	position: relative;
+	top: 0px;
+	float: left;
+	background: #555 url('/static/images/global-sprite.png') 0px -400px no-repeat;
+	width: 115px;
+	height: 40px;
+	margin: 0px 10px 0px 0px;
+	font-size: 15px;
+	line-height: 24px;
+	font-weight: normal;
+}
+
+#shopAllList {
+	position:absolute;
+	width:300px;
+	margin: 0 10px;
+}
+
+#shopAllList ul {
+	background-color: #FFF;
+}
+
+#shopAllList div.tongue {
+	width: 115px;
+	height: 13px;
+	padding: 0;
+	margin: 0 0 -2px 0;
+	background: url('/static/images/global-sprite.png') 0px -480px no-repeat;
+}
+
+.headerSubNav .down {
+	background: url('/static/images/global-sprite.png') 0px -400px no-repeat;
+}
+
+.headerSubNav .up {
+	background: url('/static/images/global-sprite.png') 0px -440px no-repeat;
+}
+
+.shopAllText {
+	padding: 9px 0px 8px 0;
+	text-align: center;
+	font-weight: bold;
+	color: #ffffff;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+/* header Video Button
+.headerVideo { position:relative; top:0px; float:left; background: url('/static/images/global-sprite.png') -163px 0px no-repeat; width:40px; height:40px; margin:0px 10px 0px 0px; font-size:15px; line-height:24px; font-weight:normal; } */
+
+/* header SearchBox */
+
+.headerSearchBox {
+	position: relative;
+	top: 0px;
+	float: left;
+	width: 173px;
+	height: 38px;
+	border: 1px solid #999999;
+	border-radius: 1px;
+	-moz-border-radius: 1px;
+}
+
+.headerSearchBox input.searchField {
+	position: relative;
+	float: left;
+	background: none;
+	width: 130px;
+	height: 38px;
+	color: #999999;
+	padding: 0px 5px 0px 5px;
+	margin: 0;
+	border: 0px;
+}
+
+.headerSearchBox input.searchField2 {
+	position: relative;
+	float: left;
+	background: none;
+	width: 130px;
+	height: 38px;
+	color: #000000;
+	padding: 0px 5px 0px 5px;
+	margin: 0;
+	border: 0px;
+}
+
+.headerSearchBox .searchButton {
+	position: relative;
+	top: 0px;
+	float: right;
+	left: 0px;
+	width: 29px;
+	height: 39px;
+	background: url('/static/images/global-sprite.png') -1px -1px no-repeat;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	cursor: pointer;
+	border: 1px;
+}
+
+.headerSearchBox .searchButton span {
+	visibility: hidden;
+}
+
+/***** Last updated: 5-29-2012 2:19pm *****/
+
+/* Table of Contents
+	Shared Styles
+	Landing Styles
+	PLP Styles
+	Video List and Search Styles
+	Video Details page
+	PIP Styles
+	Store Finder pages
+*/
+
+/* ==================== Shared Styles ==================== */
+
+/* PLP and Video List */
+
+.plp-title, .videolist-title {
+	padding-bottom: 20px;
+	display: block;
+}
+
+.plp-actions, .videolist-actions {
+	padding-bottom: 10px;
+}
+
+ul.plp-refinements {
+	padding-bottom: 10px;
+}
+
+.plp-actions li, .videolist-actions li {
+	float: left;
+	padding-left: 8px;
+	padding-right: 8px;
+	border-right: solid 1px #000;
+}
+
+.plp-actions li.first, .videolist-actions li.first {
+	padding-left: 0;
+}
+
+.plp-actions li.last, .videolist-actions li.last {
+	border: none;
+	padding-right: 0;
+}
+
+.plp-actions .dynamic_btn, .videolist-actions .dynamic_btn {
+	padding: 0;
+}
+
+/* Sort Button Flyout Fix */
+
+.plp-title {
+	padding:0 0 7px 0;
+}
+
+.plp-actions {
+	padding:0;
+}
+
+.plp-actions li, .plp-actions li.first, .plp-actions li.last {
+	padding:0;
+	border: none;
+	padding:6px 0 7px 0;
+}
+
+.plp-actions a {
+	padding:0;
+	color: #666;
+	border-left:1px solid black;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+	border-radius: 0;
+}
+
+.plp-actions span {
+	display: inline-block;
+	margin:0 8px;
+}
+
+.plp-actions li:first-child a {
+	border-left:none;
+}
+
+.plp-actions li:first-child span {
+	margin:0 10px 0 0;
+}
+
+.plp-actions li.on {
+	background-color:#666;
+}
+.plp-actions li.on a {
+	border:1px solid #666;
+	color:#FFF;
+}
+.plp-actions li.on span.carrot {
+	background: url('/static/images/global-sprite.png') no-repeat right -223px;
+} 
+
+#plp-sortList {
+	position:absolute;
+	left:0;
+	top:0;
+	z-index: 1000;
+	background-color: #666;
+	width:300px;
+	margin:0 10px;
+}
+
+
+/* ==================== Landing Styles ==================== */
+
+.landing-image {
+	float: left;
+	margin-right: 10px;
+}
+
+.landing-link {
+	
+}
+
+.landing-copy {
+	
+}
+
+.landing-title {
+	
+}
+
+.landing-description {
+	
+}
+
+/* ==================== PLP Styles ==================== */
+
+.plp-sortDropdown {
+	width: 75px;
+}
+
+.plp-resultsCount {
+	border: none;
+	padding-right: 0;
+}
+
+.plp-image {
+	float: left;
+	margin-right: 10px;
+}
+
+.plp-prices {
+	padding-bottom: 10px;
+}
+
+.plp-brandDescription {
+	margin-bottom: 8px;
+	height: 32px;
+	overflow: hidden;
+	display: block;
+}
+
+/*  plp-pagination fix */
+
+ul.plp-pagination {
+	margin: 10px 0 20px 0;
+	padding: 0;
+	list-style: none;
+}
+
+ul.plp-pagination li {
+	display: inline;
+	float: left;
+	margin: 0 5px 0 0;
+	width: 40px;
+	height: 40px;
+}
+
+ul.plp-pagination li:first-child {
+	display: inline;
+	float: left;
+	margin: 0 5px 0 10px;
+	width: auto;
+	height: 40px;
+}
+
+ul.plp-pagination li:first-child span {
+	display: table-cell;
+	vertical-align: middle;
+	height: 40px;
+	color: #777;
+	background-color: #FFF;
+	font-size: 12px;
+}
+
+ul.plp-pagination li a {
+	display: table-cell;
+	width: 40px;
+	height: 40px;
+	vertical-align: middle;
+	text-align: center;
+	color: #FFF;
+	background-color: black;
+}
+
+ul.plp-pagination li.active a {
+	color: #FFF;
+	background-color: #F96302;
+}
+
+/* ==================== Refinement Styles ==================== */
+
+.refinements-list li {
+	padding: 5px 0px 5px 0px;
+}
+
+.refinements-list li .totalItems {
+	padding: 0 0 0 10px;
+}
+
+/* ==================== Video List and Search Styles ==================== */
+
+.videolist-container {
+	background: #666666;
+}
+
+.videolist-left {
+	color: #fff;
+	width: 150px;
+	float: left;
+}
+
+.videolist-left a {
+	color: #fff;
+}
+
+.videolist-leftCopy {
+	margin-bottom: 15px;
+	height: 77px;
+	overflow: hidden;
+}
+
+.videolist-right {
+	width: 140px;
+	float: right;
+	color: #fff;
+}
+
+.videolist-vidThumbnail {
+	width: 140px;
+	height: 100px;
+	margin-bottom: 10px;
+	background: #fff;
+	display: block;
+	position: relative;
+}
+
+.videolist-vidThumbnail img {
+	width: 140px;
+	height: 100px;
+}
+
+/*.videolist-playBtn { width:0; height:0; border-top:25px solid transparent; border-bottom:25px solid transparent; border-left:25px solid #fff;
+	position:absolute; top:25px; left:50px; } */
+
+.videolist-playBtn {
+	width: 35px;
+	height: 46px;
+	background: url('/static/images/modules-sprite.png') no-repeat -115px -203px;
+	padding: 0 15px 0 0;
+	position: absolute;
+	top: 27px;
+	left: 53px;
+}
+
+/* QC-18472 */
+
+/* ==================== Video Details page ==================== */
+
+.videoPod {
+	width: 211px;
+	height: auto;
+	background: #666666;
+	padding: 20px 55px 0px 54px;
+}
+
+/*  padding:20px 35px 0px 35px; */
+
+.videoPod div:first-child {
+	position: relative;
+}
+
+.videoPlayS {
+	position: absolute;
+	top: 50px;
+	left: 93px;
+}
+
+.videoLength {
+	color: #ffffff;
+	padding: 10px 20px 10px 20px;
+}
+
+.videoLength span:first-child {
+	
+}
+
+.videoLength span:last-child {
+	float: right;
+}
+
+/* ==================== PIP Styles ==================== */
+
+/* Table of Contents
+	PIP product
+	PIP cart area
+	PIP columns
+	PIP review
+	PIP Reviews page
+	PIP Bopis Inventory
+*/
+
+/* PIP product */
+
+.pipProduct img {
+	position: relative;
+	top: 0px;
+	left: 50px;
+	width: 200px;
+	height: 200px;
+}
+
+ul.pipLocMsg {
+	padding: 0px 0px 10px 0px;
+}
+
+.pipShip {
+	position: relative;
+	background-color: #ffc20e;
+	margin-top: 10px;
+	padding: 0px 10px 0px 10px;
+}
+
+.pipShipImg {
+	position: relative;
+	top: 7px;
+	background: url('/static/images/modules-sprite.png') 0px 0px no-repeat;
+	width: 26px;
+	height: 26px;
+	padding: 0px 0px 0px 0px;
+}
+
+.pipShipText {
+	position: relative;
+	top: -13px;
+	left: 36px;
+	width: 264px;
+}
+
+/* PIP cart area */
+
+.pipCart {
+	background-color: #dddddd;
+	padding: 10px 10px 0px 10px;
+}
+
+.pipShipQualifiers {
+	padding: 0px 0px 10px 0px;
+}
+
+#pipCartForm {
+	position: relative;
+}
+
+#pipCartForm form {
+	
+}
+
+#pipCartForm input.pipcartField {
+	float: left;
+	background: #ffffff;
+	width: 40px;
+	height: 33px;
+	color: #999999;
+	padding: 0px 0px 0px 10px;
+	margin-right: 10px;
+	border: 1px solid #999999;
+	border-radius: 1px;
+	-moz-border-radius: 1px;
+}
+
+#pipCartForm input.pipcartField2 {
+	float: left;
+	background: #ffffff;
+	width: 40px;
+	height: 33px;
+	color: #000000;
+	padding: 0px 0px 0px 10px;
+	margin-right: 10px;
+	border: 1px solid #000000;
+	border-radius: 1px;
+	-moz-border-radius: 1px;
+}
+
+#pipCartForm .pipCartButton {
+	float: left;
+	margin: 0px 10px 10px 0px;
+}
+
+.pipBopisButton {
+	float: left;
+	margin: 0px 10px 10px 0px;
+}
+
+.buttonContainer {
+	color: #000000;
+}
+
+/* this class is used by global.js for show/hide buttons */
+
+/* PIP columns */
+
+ul.columnA {
+	margin: 0px 0px 10px 0px;
+}
+
+ul.columnA li {
+	margin: 0;
+	padding: 0;
+}
+
+ul.columnA li div:first-child {
+	float: left;
+	width: 125px;
+	margin: 0;
+	padding: 0;
+	display: block;
+}
+
+ul.columnA li div:last-child {
+	margin: 0px 0px 0px 130px;
+	display: block;
+}
+
+ul.columnB li {
+	margin: 0;
+	padding: 0;
+	clear: both;
+	border-top: 1px solid #dddddd;
+	padding: 10px 0px;
+}
+
+ul.columnB li:first-child {
+	border-top: 0px;
+	padding-top: 0px;
+}
+
+ul.columnB li:last-child {
+	padding: 0px;
+	border: 0px;
+}
+
+ul.columnB li div:first-child {
+	display: block;
+	float: left;
+	width: 125px;
+	margin: 0;
+	padding: 0px 0px 10px 0px;
+	word-wrap: break-word;
+}
+
+/* QC-18490 was width:175px; */
+
+ul.columnB li div:last-child {
+	margin: 0 0 0 130px;
+	display: block;
+	word-wrap: break-word;
+}
+
+/* QC-18490 was margin:0 0 0 175px; */
+
+/* PIP review on pip page */
+
+div.pipReviewNum {
+	float: right;
+}
+
+div.pipReviewNone {
+	display: none;
+}
+
+div.pipReviewNum + div.ratings, div.pipReviewNone + div.ratings  {
+	float: right;
+	background: url('/static/images/stars-small.png') 0 -27px repeat-x;
+	margin: 3px 0 0 0;
+}
+
+/* PIP Reviews page */
+
+li.pipReviewPage span {
+	float: left;
+	margin-right: 10px;
+}
+
+li.pipReviewPage div.ratings {
+	margin-right: 5px;
+}
+
+/*
+li.pipReviewPage { border-bottom:0px solid #DDD; cursor:default; }
+div.pipReviewPage { float:right; }
+div.pipReviewPage + div.ratings { float:right; background: url('/static/images/stars-small.png') 0 -53px repeat-x; }
+*/
+
+/* PIP Bopis Inventory */
+
+.pipInv .dynamic_btn.green_btn {
+	float: left;
+	margin: 10px 10px 10px 0px;
+	cursor: default;
+}
+
+.pipInv .dynamic_btn.green_btn .check {
+	padding: 0px 0px 0px 15px;
+	vertical-align: middle;
+}
+
+.pipInv ul li:last-child {
+	float: left;
+	margin: 10px 0px;
+}
+
+/* Bopis Inventory SearchBox */
+
+.pipInvSearchArea {
+	width: 300px;
+	height: 40px;
+	border: 5px solid #eeeeee;
+	border-width: 5px 10px 5px 10px;
+}
+
+.pipInvSearchBox {
+	position: relative;
+	top: 0px;
+	float: left;
+	width: 298px;
+	height: 38px;
+	border: 1px solid #999999;
+	border-radius: 1px;
+	-moz-border-radius: 1px;
+}
+
+.pipInvSearchBox input.searchField {
+	position: relative;
+	float: left;
+	background: none;
+	width: 257px;
+	height: 38px;
+	color: #999999;
+	padding: 0px 5px 0px 5px;
+	margin: 0;
+	border: 0px;
+}
+
+.pipInvSearchBox input.searchField2 {
+	position: relative;
+	float: left;
+	background: none;
+	width: 257px;
+	height: 38px;
+	color: #000000;
+	padding: 0px 5px 0px 5px;
+	margin: 0;
+	border: 0px;
+}
+
+.pipInvSearchBox .searchButton {
+	position: relative;
+	top: 0px;
+	float: right;
+	left: 0px;
+	width: 29px;
+	height: 39px;
+	background: url('/static/images/global-sprite.png') -1px -1px no-repeat;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	cursor: pointer;
+	border: 1px;
+}
+
+.pipInvSearchBox .searchButton span {
+	visibility: hidden;
+}
+
+/* Error for form validation */
+
+#pipInvErrorMsg {
+	
+}
+
+/* ==================== Store Finder pages ==================== */
+
+/* Store Landing Use GPS button */
+
+#useGPS_btn {
+	float: left;
+	padding-left: 26px;
+	padding-right: 26px;
+}
+
+/* QC 18477 */
+
+.sfOrText {
+	float: left;
+	padding: 10px 10px 10px 10px;
+	font-size: 14px;
+}
+
+/* QC 18477 */
+
+/* Store Landing Search Box */
+
+.sfSearchArea {
+	width: 300px;
+	background: #eee;
+	padding: 10px;
+}
+
+.sfSearchBox {
+	float: right;
+	width: 157px;
+	height: 35px;
+	border: 1px solid #999999;
+	border-radius: 1px;
+	-moz-border-radius: 1px;
+}
+
+/* QC 18477 */
+
+.sfSearchBox input.searchField {
+	float: left;
+	background: #fff;
+	width: 118px;
+	height: 35px;
+	color: #999999;
+	padding: 0px 5px 0px 5px;
+	margin: 0;
+	border: 0px;
+}
+
+/* QC 18477 */
+
+.sfSearchBox input.searchField2 {
+	float: left;
+	background: #fff;
+	width: 118px;
+	height: 35px;
+	color: #000000;
+	padding: 0px 5px 0px 5px;
+	margin: 0;
+	border: 0px;
+}
+
+/* QC 18477 */
+
+.sfSearchBox .searchButton {
+	float: right;
+	left: 0px;
+	width: 29px;
+	height: 35px;
+	background: url('/static/images/global-sprite.png') -1px -2px no-repeat;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	cursor: pointer;
+	border: 0px;
+}
+
+.sfSearchBox .searchButton span {
+	visibility: hidden;
+}
+
+/* Store List */
+
+.sfStoreList .dynamic_btn.green_btn {
+	cursor: default;
+}
+
+/* Store Details */
+
+.sfStoreDetails ul {
+	float: left;
+	width: 145px;
+}
+
+.sfStoreDetails ul:first-child {
+	margin-right: 10px;
+}
+
+.sfStoreDetails li.title {
+	text-transform: capitalize;
+}
+
+/* In-Store Layout */
+
+.sfStoreLayout ul {
+	background-color: #333;
+}
+
+.sfStoreLayout li {
+	padding: 5px 10px;
+}
+
+.sfStoreLayout li span.dynamic_btn {
+	padding: 10px 40px;
+}
+
+.sfStoreLayout div {
+	background-color: #ccc;
+}
+
+/* Map */
+
+#map, #detailsMap {
+	height: 200px;
+	width: 320px;
+}
+
+.setStore {
+	font-weight: bold;
+}
+
+.curStore {
+	color: green;
+}
+
+.green-poi {
+	background: url('/static/images/map-poi-grn.png') 1px 0 no-repeat;
+	padding-top: 8px;
+	text-align: center;
+	overflow: hidden;
+	width: 30px;
+	height: 50px;
+	font-weight: bold;
+}
+
+.orange-poi {
+	background: url('/static/images/map-poi-org.png') 1px 0 no-repeat;
+	padding-top: 8px;
+	text-align: center;
+	overflow: hidden;
+	width: 30px;
+	height: 50px;
+	font-weight: bold;
+}
+
+.detailsMapOverlay {
+	padding: 10px;
+	color: #fff;
+	display: inline-block;
+	min-width: 150px;
+	background-color: rgba(000,0,0,0.6);
+}
+
+.detailsMapOverlay span {
+	color: #fff;
+}
+
+.staticMap {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 320px;
+	height: 200px;
+}
+
+.grid_6, .grid_12 {
+	display: inline;
+	float: left;
+	position: relative;
+}
+
+.container_2 .grid_12 {
+	width: 320px;
+}
+
+.container_2 .grid_6 {
+	width: 160px;
+}
+
+.invisible {
+	display: none;
+}
+
+.pod .header {
+	font-size: 14px;
+	line-height: 15px;
+	width: auto;
+}
+
+h3.rowHeader {
+	text-transform: uppercase;
+	padding: 10px 10px 0 10px;
+	color: #777;
+	display: block;
+}
+
+.pod .content_image {
+	position: relative;
+}
+
+.pod .title {
+	padding: 0 0 5px 0;
+	display: block;
+}
+
+.pod h3 {
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.pod .item_description {
+	display: block;
+}
+
+.pod p, .pod h3, .pod .content div, .pod .item_description {
+	padding: 0 0 10px 0;
+}
+
+.pod ul:not(#pipMenu, .headerMenu) {
+    padding: 0 0 10px 0; 
+}  
+
+.pod .content_image.left {
+	display: inline-block;
+	padding: 0 10px 0 0;
+}
+
+.pod .content_image.left + .title {
+	padding: 7px 10px 5px 0;
+}
+
+.pod .content_image .dynamic_btn {
+	position: absolute;
+	top: 70px;
+	left: 22px;
+}
+
+.pod .xlarge.item_price {
+	font-weight: bold;
+	display: block;
+	margin: 0 0 -3px 0;
+	color: #000;
+}
+
+.pod .item_pricing_wrapper .item_stike_price {
+	text-decoration: line-through;
+	color: #777777;
+	font-size: 12px;
+}
+
+.pod .item_pricing_wrapper .xlarge {
+	font-size: 22px;
+	font-weight: bold;
+}
+
+.pod .value_icon {
+	position: absolute;
+	width: 45px;
+	height: 45px;
+	bottom: 10px;
+	left: -5px;
+	background: red;
+	text-indent: -9999px;
+}
+
+.pod .savings_message {
+	position: absolute;
+	top: 15px;
+	left: -10px;
+	background: #f96302;
+	font-weight: bold;
+	color: #fff;
+	text-align: right;
+	padding: 4px 6px 3px 13px;
+	cursor: default;
+}
+
+.pod .reviews {
+	display: block;
+	margin: 0 0 15px 0;
+}
+
+.pod .reviews .stars {
+	width: 80px;
+	background: yellow;
+	height: 15px;
+	padding: 0 5px 0 0;
+	float: left;
+}
+
+.pod .reviews .review_count {
+	float: left;
+}
+
+.pod .pod_video_icon {
+	cursor: pointer;
+	position: absolute;
+	background: #000 url('/static/images/modules-sprite.png') no-repeat -115px -201px;
+	width: 40px;
+	height: 41px;
+	top: 50px;
+	left: 0;
+	-web-kit-border-radius: 0 4px 4px 0;
+	-moz-border-radius: 0 4px 4px 0;
+	border-radius: 0 4px 4px 0;
+	filter: alpha(opacity=50);
+	-moz-opacity: .50;
+	opacity: .50;
+	/*Easter Egg*/
+	-moz-transition: all .15s linear;
+	-o-transition: all .15s linear;
+	-webkit-transition: all .15s linear;
+	transition: all .15s linear;
+}
+
+.pod .pod_video_icon:hover {
+	width: 55px;
+	filter: alpha(opacity=80);
+	-moz-opacity: .80;
+	opacity: .80;
+}
+
+.pod .availibility {
+	font-weight: bold;
+	font-size: 12px;
+	display: block;
+	color: #777;
+	float: none;
+	clear: both;
+}
+
+.pod .twoColumn .linkList:first-child {
+	float:left;
+}
+.pod .twoColumn .linkList {
+	float:right;
+	width:48%;
+}
+.pod .twoColumn li {
+	padding-top: 10px;
+}
+
+/* Hero */
+
+.pod .hero_info {
+	position: absolute;
+	width: 280px;
+	height: auto;
+	padding: 20px;
+	top: 0;
+	color: white;
+	text-shadow: 1px 2px 4px #333;
+}
+
+.pod .hero_info h1 {
+	font-size: 28px;
+	font-weight:bold;
+	letter-spacing: -1pt;
+	line-height: 0.9;
+	display: block;
+}
+
+.pod .hero_info h2 {
+	font-size: 24px;
+	font-weight:bold;
+	letter-spacing: -1pt;
+	line-height: 0.9;
+	display: block;
+}
+
+.pod .hero_info h3 {
+	line-height: 1;
+	display: block;
+}
+
+.pod .hero_info .dynamic_btn {
+	margin-top: 15px;
+}

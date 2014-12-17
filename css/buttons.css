@@ -1,0 +1,131 @@
+/* (5) Buttons 
+------------------------------------------------------------------------------*/
+
+.btn {
+  display: inline-block;
+  width:auto;
+  padding: 8px;
+  margin-bottom: 0;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 1em;
+  text-transform: up
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -0-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+       -o-user-select: none;
+          user-select: none;
+}
+.btn-default {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b3b3b3), color-stop(100%,#999999));
+  background: -webkit-linear-gradient(top,  #b3b3b3 0%,#999999 100%);
+  background: -ms-linear-gradient(top,  #b3b3b3 0%,#999999 100%);
+  background: linear-gradient(to bottom,  #b3b3b3 0%,#999999 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3b3b3', endColorstr='#999999',GradientType=0 );
+  border: 1px solid #9a9a9a;
+  color: #fff;
+}
+.btn-primary {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f9871e), color-stop(100%,#f96302));
+  background: -webkit-linear-gradient(top, #f9871e 0%,#f96302 100%);
+  background: -ms-linear-gradient(top, #f9871e 0%,#f96302 100%);
+  background: linear-gradient(top, #f9871e 0%,#f96302 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#f9871e', endColorstr='#f96302',GradientType=0 );
+  border: 1px solid #f96302;
+  color: #fff;
+}
+.btn-success {
+  background: #249c47;
+  border: 1px solid #249c47;
+  color: #fff;
+}
+
+.btn-info {
+  background: #666666;
+  color: #fff;
+}
+
+.btn-secondary {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#999999), color-stop(100%,#777777));
+  background: -webkit-linear-gradient(top,  #999999 0%,#777777 100%);
+  background: -ms-linear-gradient(top,  #999999 0%,#777777 100%);
+  background: linear-gradient(to bottom,  #999999 0%,#777777 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#999999', endColorstr='#777777',GradientType=0 );
+  border: 1px solid #777777;
+  color: #fff;
+}
+
+.btn-danger {
+  color: #ffffff;
+  background-color: #ed1c24;
+  border-color: #ed1c24;
+}
+
+/* Disabled Buttons */
+.btn.disabled,
+.btn[disabled],
+fieldset[disabled] .btn {
+  pointer-events: none;
+  cursor: not-allowed;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.btn-link {
+  font-weight: normal;
+  color: #777;
+  cursor: pointer;
+  border-radius: 0;
+}
+
+.btn-link,
+.btn-link:active,
+.btn-link[disabled],
+fieldset[disabled] .btn-link {
+  background-color: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.btn-sm,
+.btn-xs {
+  padding: 3px 8px;
+  font-size: 11px;
+  border-radius: 3px;
+}
+.btn-large {
+  font-size:14px;
+  padding: 15px 20px;
+}
+}
+.btn-xs {
+  padding: 1px 5px;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.btn-block + .btn-block {
+  margin-top: 5px;
+}
+
+input[type="submit"].btn-block,
+input[type="reset"].btn-block,
+input[type="button"].btn-block {
+  width: 100%;
+}

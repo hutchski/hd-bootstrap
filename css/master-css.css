@@ -1,0 +1,676 @@
+/* ----------------------------------------------------------------------------
+  Purpose:
+  Global CSS Styles for both TW and MW.
+  Last Updated: 10-22-2013 6:45pm 
+*/
+/*  ----------------------------------------------------------------------------
+  Table Of Contents
+  1. Resets & Defaults
+    a. Resets
+    b. Defaults
+  2. Grid and Layout
+    a. Grid
+    b. Layout
+  3. Generics
+  	3a. Background Colors
+  	3b. Border Colors
+  4. Typography
+  	4a. Text Colors
+  	4b. Text Alignment
+  	4c. Text Sizes
+  	4d. Text Styles
+  5. Buttons
+  6. Forms
+  7. Alerts/Error Handling
+*/
+
+/*  ----------------------------------------------------------------------------
+  (1) Defaults & Resets */
+
+/** Refer to mw-reset.css or tw-reset.css for specific styles. **/
+
+/*  ----------------------------------------
+  (1a) Defaults & Resets - Resets */
+
+*, form {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+a img { border: none; }
+img { /*display: block;*/ }
+ul, ol { list-style-type: none; }
+b, strong, b *, strong * { font-weight: bold; }
+h1, h2, h3, h4, h5, h6 { font-weight: normal; }
+
+p, a, span {
+	-webkit-transform:translateZ(0); /* Can be removed when we stop supporting iOS5.1 */
+}
+
+/*  ----------------------------------------
+  (1b) Defaults & Resets - Defaults */
+html, body {
+	background: #fff;
+}
+body {
+	color: #333;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:14px;
+}
+a { color: #000; text-decoration: none; }
+p { font-size: 14px; margin: 0 0 15px 0; }
+
+/*  -------------------------------------------------------------------------------------------
+  (2) Grid and Layout */
+
+/* Main Container */
+.container {
+	margin-left: auto;
+	margin-right: auto;
+}
+/** Refer to mw-grid.css or tw-grid.css for specific styles. **/
+
+
+/*  ----------------------------------------------------------------------------
+  (3) Generics */
+
+.hide { display: none !important;}
+.invisible { visibility: hidden; }
+.clearfix:after {
+	clear: both;
+	content: " ";
+	display: block;
+	font-size: 0;
+	height: 0;
+	visibility: hidden;
+}
+.clear {
+	position: relative;
+	font-size: 0;
+	height: 0;
+	clear: both;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+}
+.inline { display: inline }
+
+/* Floats */
+.left { float: left; }
+.right { float: right; }
+
+/* Standard Padding */
+.spad { padding: 10px; }
+
+/* Standard Margin */
+.smargin { margin: 10px; }
+
+/* Standard Border */
+.sborder { border: 0 solid #ccc; }
+.border-top { border-top-width: 1px; }
+.border-bottom { border-bottom-width: 1px; }
+
+/* Lists */
+ul { list-style-type: none; }
+ol {
+	list-style-type: decimal;
+	padding-left: 20px;
+}
+
+/*	----------------------------------------
+	(3a) Generics - Background Colors */
+
+.bg-default { background-color: #eee; }
+.bg-light { background-color: #ddd; }
+.bg-secondary { background-color: #ccc; }
+.bg-info { background-color: #666; }
+.bg-dark { background-color: #333; }
+.bg-primary { background-color: #F96302; }
+.bg-paper { background-color: #fff; }
+
+/*	----------------------------------------
+	(3b) Generics - Border Colors */
+
+.border-default { border-color: #eee; }
+.border-light { border-color: #ddd; }
+.border-secondary { border-color: #ccc; }
+.border-info { border-color: #666; }
+.border-dark { border-color: #333; }
+.border-primary { border-color: #F96302; }
+.border-paper {border-color: #fff;}
+
+/*  ----------------------------------------------------------------------------
+  (4) Typography */
+
+/*	----------------------------------------
+	(4a) Typography - Text Colors */
+
+.text-muted {color: #777;} /* Light Gray */
+.text-primary {color: #f96302;} /* THD Orange */
+.text-warning {color: #ffc20e;} /* Yellow */
+.text-danger {color: #ed1c24;} /* Red */
+.text-success {color: #249c47;} /* NLP Green */
+.text-info {color: #555;} /* Dark Gray */
+.text-none {color:#fff;}
+
+/*	----------------------------------------
+	(4b) Typography - Text Alignment */
+
+.text-left {text-align: left;}
+.text-right {text-align: right;}
+.text-center {text-align: center;}
+.text-justify {text-align: justify;}
+.truncate { /* Only works on single lines */
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.v-align-middle {vertical-align: middle;}
+.v-align-top {vertical-align: top;}
+
+/*	----------------------------------------
+	(4c) Typography - Text Sizes */
+
+.title {font-weight: bold;}
+.xlarge {font-size: 22px;}
+.large {font-size: 18px;}
+.normal {font-size: 14px;line-height: 15px;}
+.small {font-size: 12px;}
+.xsmall {font-size: 10px;}
+
+/*	----------------------------------------
+	(4d) Typography - Text Styles */
+
+.bold {font-weight: bold;}
+.italic {font-style: italic;}
+.uppercase {text-transform: uppercase;}
+.strike-through {text-decoration: line-through;}
+
+
+/*	----------------------------------------------------------------------------
+	(5) Buttons */
+.btn>i[class*="icon-"] {
+	vertical-align: middle;
+}
+
+.btn, .thdTablet-btn {
+	display: inline-block;
+	padding: 8px;
+	margin-bottom: 0;
+	font-weight: bold;
+	font-size: 12px;
+	line-height: 1em;
+	text-transform: uppercase;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	cursor: pointer;
+	border: 1px solid transparent;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-0-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+.btn-default,
+input.btn-default { /* Light Gray, Gradient Button */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b3b3b3), color-stop(100%,#999999));
+  background: -webkit-linear-gradient(top,  #b3b3b3 0%,#999999 100%);
+  background: -ms-linear-gradient(top,  #b3b3b3 0%,#999999 100%);
+  background: linear-gradient(to bottom,  #b3b3b3 0%,#999999 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3b3b3', endColorstr='#999999',GradientType=0 );
+  border: 1px solid #9a9a9a;
+  color: #fff;
+}
+.btn-primary,
+input.btn-primary { /* Orange, Gradient Button */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f9871e), color-stop(100%,#f96302));
+  background: -webkit-linear-gradient(top, #f9871e 0%,#f96302 100%);
+  background: -ms-linear-gradient(top, #f9871e 0%,#f96302 100%);
+  background: linear-gradient(top, #f9871e 0%,#f96302 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#f9871e', endColorstr='#f96302',GradientType=0 );
+  border: 1px solid #f96302;
+  color: #fff;
+}
+.btn-success,
+input.btn-success { /* Green, Flat Button */
+  background: #249c47;
+  border: 1px solid #249c47;
+  color: #fff;
+}
+.btn-info,
+input.btn-info { /* Dark Gray, Flat Button */
+  background: #666666;
+  color: #fff;
+}
+.btn-secondary,
+input.btn-secondary { /* Medium Gray, Gradient Button */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#999999), color-stop(100%,#777777));
+  background: -webkit-linear-gradient(top,  #999999 0%,#777777 100%);
+  background: -ms-linear-gradient(top,  #999999 0%,#777777 100%);
+  background: linear-gradient(to bottom,  #999999 0%,#777777 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#999999', endColorstr='#777777',GradientType=0 );
+  border: 1px solid #777777;
+  color: #fff;
+}
+.btn-dark,
+input.btn-dark { /* Dark Gray, Gradient Button */
+	color: #FFF;
+	border: 1px solid #555555;
+	background: #575757; /* Old browsers */
+	background: -moz-linear-gradient(top,  #555555 0%, #333333 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#555555), color-stop(100%,#333333)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #555555 0%,#333333 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #555555 0%,#333333 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #555555 0%,#333333 100%); /* IE10+ */
+	background: linear-gradient(top bottom,  #555555 0%,#333333 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#55', endColorstr='#33',GradientType=0 ); /* IE6-9 */
+}
+.btn-danger,
+input.btn-danger { /* Red, Flat Button */
+  color: #fff;
+  background-color: #ed1c24;
+  border-color: #ed1c24;
+}
+.btn-white,
+input.btn-white {
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#ededed));
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#ededed 100%);
+	background: -ms-linear-gradient(top,  #ffffff 0%,#ededed 100%);
+	background: linear-gradient(to bottom,  #ffffff 0%,#ededed 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=0 );
+	border: 1px solid #ccc;
+	color: #666666;
+}
+.btn-flat-lightGray, .thdTablet-btn-flat-lightGray {
+	background: #999;
+	color: #fff;
+}
+.btn-short {
+	text-transform: capitalize;
+	padding: 4px 6px;
+	font-weight: normal;
+}
+
+/* Disabled Buttons */
+.btn.disabled,
+.btn[disabled],
+fieldset[disabled] .btn {
+  pointer-events: none;
+  cursor: not-allowed;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.btn-link {
+  font-weight: normal;
+  color: #777;
+  cursor: pointer;
+  border-radius: 0;
+}
+.btn-link,
+.btn-link:active,
+.btn-link[disabled],
+fieldset[disabled] .btn-link {
+  background-color: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+/* Button Sizing */
+.btn-sm,
+.btn-xs {
+  padding: 3px 8px;
+  font-size: 11px;
+  border-radius: 3px;
+}
+.btn-large {
+  font-size:14px;
+  padding: 15px 20px;
+}
+}
+.btn-xs {
+  padding: 1px 5px;
+}
+
+/* Button Display Helpers */
+.btn-block {
+  display: block;
+  width: 100%;
+  padding-right: 0;
+  padding-left: 0;
+}
+.btn-block + .btn-block {
+	margin-top: 5px;
+}
+input[type="submit"].btn-block,
+input[type="reset"].btn-block,
+input[type="button"].btn-block {
+	width: 100%;
+}
+
+/* ----------------------------------------------------------------------------
+	(7) Alerts/Error Handling */
+	/* Stack .text- color classes as necesary. */
+
+.alert {
+	padding: 8px;
+	margin-bottom: 20px;
+	border: 1px solid transparent;
+	border-radius: 3px;
+}
+.alert h4 {
+	margin-top: 0;
+	color: inherit;
+}
+.alert .alert-link {
+	font-weight: bold;
+}
+.alert > p,
+.alert > ul {
+	margin-bottom: 0;
+}
+.alert > p + p {
+	margin-top: 5px;
+}
+.alert-dismissable {
+	padding-right: 35px;
+}
+.alert-dismissable .close {
+	position: relative;
+	top: -2px;
+	right: -21px;
+	color: inherit;
+}
+.alert-success {
+	border-color: #249c47;
+}
+.alert-info {
+	border-color: #777;
+}
+.alert-warning {
+	border-color: #ffc20e;
+}
+.alert-danger {
+	border-color: #ed1c24;
+}
+
+/* ---------------------------------------------------------------------------------------------------------- */
+/* STYLES FOR _FORMS () */
+
+input[type=text],
+input[type=email] {
+	height: 35px;
+	background-color: #eee;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	border: 1px solid #CCC;
+	padding-left: 10px;
+	vertical-align: middle;
+	-webkit-appearance: none;
+	z-index: 101;
+}
+
+.disabled {
+	opacity:0.5;
+	-moz-opacity: .50;
+	filter:alpha(opacity=50); /* For IE8 and earlier */
+	cursor: default;
+	pointer-events: none;
+	cursor:not-allowed;
+}
+
+
+
+/* ---------------------------------------------------------------------------------------------------------- */
+/* STYLES FOR _GLOBAL (Could Be Used Anywhere) */
+
+/* ---------------------------------------------------- */
+/* GLOBAL Image Swipe Navigation */
+.swipable-image-nav {
+	width: 290px;
+	margin: 0 auto 10px auto;
+	text-align: center;
+}
+.swipable-image-indicator,
+.swipable-image-indicator > a {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.swipable-image-indicator {
+	display: inline-block;
+}
+.swipable-image-indicator > a.dot {
+	text-indent: -9999em;
+	width: 8px;
+	height: 8px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-o-border-radius: 4px;
+	border-radius: 4px;
+	background: #333333;
+	overflow: hidden;
+	margin-right: 4px;
+	margin-top:3px;
+	float: left;
+}
+.swipable-image-indicator > a.icon-play {
+	margin-right: 4px;
+	float: left;
+}
+.swipable-image-indicator > a.dot.active {
+	background: #F96302;
+}
+.swipable-image-indicator > a.icon-play.active {
+	color: #F96302;
+}
+.swipable-image-indicator > a:last-child {
+	margin-right: 0;
+}
+
+/* ----------------------------------------------------
+	GLOBAL BUY BOX */
+
+.buy-box .button-wrapper h4 {
+	vertical-align: middle;
+	display: inline-block;
+	/*margin-bottom: 5px;
+	margin-top: 5px;*/
+}
+.buy-box a.btn i {
+	color:#fff;
+	line-height: 12px;
+}
+.buy-box a.btn {
+	text-align: center;
+	line-height: 12px;
+}
+.buy-box .cart-quantity {
+	margin-top: 5px;
+}
+.buy-box .show-radio p {
+	margin-left: 34px;
+}
+.no-radio .button-wrapper {
+	margin-bottom: 15px;
+}
+.buy-box h4.one-line {
+	padding-top: 10px;
+}
+.buy-box span.bb-inline {
+	display: inline;
+}
+.buy-box .backordered {
+	display: none;
+}
+
+/* Radio Buttons */
+.buy-box h4,
+.buy-box p.small {
+	padding-right:0;
+	padding-left:0;
+}
+.buy-box p.small {
+	line-height: 14px;
+}
+.buy-box .radio {
+	display: block;
+	overflow: auto;
+}
+.buy-box .radio label {
+	display: block;
+	cursor: pointer;
+	position: relative;
+	margin-bottom:15px;
+}
+.buy-box input[type="radio"] {
+	display:none;
+}
+.buy-box input[type="radio"] {
+	display:none;
+}
+.buy-box input[type="radio"] + label span.radio-btn {
+	display:block;
+	width:30px;
+	height:26px;
+	margin: 0;
+	vertical-align:baseline;
+	cursor:pointer;
+	float: left;
+	margin-right: 5px;
+}
+.buy-box input[type="radio"]:checked + label span.radio-btn:after {
+	background:#f96302;
+}
+.buy-box .radio-btn {
+	display: inline-block;
+	position: relative;
+}
+.buy-box .radio-btn:before, 
+.buy-box .radio-btn:after {
+	content: "";
+	position: absolute;
+	border-radius: 50%;
+}
+.buy-box .radio-btn:before {
+	width: 28px;
+	height: 28px;
+	left: 0;
+	top: 0;
+	background-color: #fff;
+	border: 1px solid #999;
+}
+.buy-box .radio-btn:after {
+	width: 16px;
+	height: 16px;
+	left: 7px;
+	top: 7px;
+	background-color: #999;
+}
+.buy-box input[type="radio"] + label .buy-box-message {
+	display: none;
+}
+.buy-box input[type="radio"]:checked + label .buy-box-message {
+		display: block;
+}
+.show-radio {
+	min-height: 30px;
+	vertical-align: middle;
+}
+.tw .button-wrapper h4 {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.button-wrapper {
+	min-height: 30px;
+}
+
+.check-available {
+	border: #e7e7e7 solid 1px;
+	height: 35px;
+	/*width: 80px;*/
+	float: left;
+	padding-left: 7px;
+	font-size: 12px;
+}
+.input-append input,
+.input-append select,
+.input-append .uneditable-input {
+  -webkit-border-radius: 4px 0 0 4px;
+     -moz-border-radius: 4px 0 0 4px;
+          border-radius: 4px 0 0 4px;
+}
+
+.input-append input + .btn-group .btn:last-child,
+.input-append select + .btn-group .btn:last-child,
+.input-append .uneditable-input + .btn-group .btn:last-child {
+  -webkit-border-radius: 0 4px 4px 0;
+     -moz-border-radius: 0 4px 4px 0;
+          border-radius: 0 4px 4px 0;
+}
+.input-append .add-on,
+.input-append .btn,
+.input-append .btn-group {
+  margin-left: -1px;
+}
+
+.input-append .add-on:last-child,
+.input-append .btn:last-child,
+.input-append .btn-group:last-child > .dropdown-toggle {
+  -webkit-border-radius: 0 4px 4px 0;
+     -moz-border-radius: 0 4px 4px 0;
+          border-radius: 0 4px 4px 0;
+}
+.input-append button {
+	height: 35px;
+}
+
+.zip-check {
+	color: #fff;
+	font-size: 100%;
+	top:0;
+}
+
+.button-wrapper > * {
+  vertical-align: middle;
+}
+
+/* BUY BOX ERROR MESSAGING */
+.errorMessage	{
+	border:1px solid #333;
+	border-radius: 3px;
+	background-color: #fff;
+	color:#333;
+	margin-bottom: 15px;
+	padding: 5px;
+	overflow: auto;
+}
+.errorMessage h4	{
+	display: block;
+	line-height: 12px;
+	font-size: 12px;
+}
+.errorMessage p,
+.errorMessage h4 {
+	margin-left: 25px;
+	margin-bottom: 0;
+}
+.tw .errorMessage p {
+	margin-bottom: 0;
+}
+.icon-attention,
+.icon-close.errorText {
+	display: block;
+	float: left;
+	top:0;
+}
